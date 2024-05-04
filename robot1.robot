@@ -7,7 +7,7 @@ Library         String
 *** Variables *** 
 ${username}	    standard_user 
 ${password}	    secret_sauce
-${Firstname}	Bupphakon
+${Firstname}		Bupphakon
 ${Lastname}		Silarat
 ${postode}		24160
 
