@@ -2,4 +2,4 @@
 Robot framework
 
 # Execute Test
-/code robot tests/TC01_Checkout.robot
+
