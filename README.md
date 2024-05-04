@@ -2,4 +2,5 @@
 Robot framework
 
 # Execute Test
+robot1.robot
 
