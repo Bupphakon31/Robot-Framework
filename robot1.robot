@@ -1,5 +1,5 @@
 *** Settings ***
-Library			SeleniumLibrary
+Library		SeleniumLibrary
 Library         BuiltIn
 Library         String
 # Suite Setup		Open Browser  https://www.saucedemo.com/ 	browser=chrome	 options=add_experimental_option("detach", True) 
