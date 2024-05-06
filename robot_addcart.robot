@@ -8,8 +8,8 @@ Library         String
 
 
 *** Variables ***
-&{Login}        username=standard_user      password=secret_sauce
-&{information}      Firstname=Bupphakon     Lastname=Silarat    postode=24160
+&{Login}                                    username=standard_user              password=secret_sauce
+&{information}                              Firstname=Bupphakon                 Lastname=Silarat                postode=24160
 &{product_Sauce_Labs_Onesie}                title=Sauce Labs Onesie             price=7.99     
 &{product_Sauce_Labs_Fleece_Jacket}         title=Sauce Labs Fleece Jacket      price=49.99  
 
@@ -152,7 +152,7 @@ Add product to cart
     ELSE
         ${count_of_cart}     Set Variable    0
     END
-
+  
   
     #step 4.7 Click Add to cart
     # Click Element    //div[@class='inventory_item' and .//div[text()='Sauce Labs Bolt T-Shirt'] and .//*[@class='inventory_item_price'][text()='15.99']]//button[text()='Add to cart']
@@ -250,22 +250,37 @@ Verify Checkouts
     Wait Until Element Is Visible            //div[@class='cart_desc_label'][text()='Description']
 
 #step 7.3 : Verify that Summary same checkout page
-    #step 7.3.1 : Verify Sauce Labs Onesie Title 
+
+    #step 7.3.1 : Verify item cart in checkout page
+
+    ${is_count_of_cart}    Run Keyword And Return Status    Page Should Contain Element    //span[@class='shopping_cart_badge']
+    IF    ${is_count_of_cart} == ${True}
+        ${last_cart}    Get Text    //span[@class='shopping_cart_badge']
+    ELSE
+        ${last_cart}     Set Variable    0
+    END
+
+    ${cart_count}                        Get Element Count                //div[@class='cart_item']               #เรียกจำนวสินค้าที่มีในตระกร้า                               
+    
+    Should Be True                       ${cart_count} == ${last_cart} 
+
+
+    #step 7.3.2 : Verify Sauce Labs Onesie Title 
     Wait Until Element Is Visible           //div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Onesie}[title]']]
 
-    #step 7.3.2 : Verify Sauce Labs Onesie Price
+    #step 7.3.3 : Verify Sauce Labs Onesie Price
     Wait Until Element Is Visible           //div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Onesie}[title]'] and .//div[@class='inventory_item_price'][text()='${product_Sauce_Labs_Onesie}[price]']]
 
-    #step 7.3.3 : Verify that product QTY = 1
+    #step 7.3.4 : Verify that product QTY = 1
     Wait Until Element Is Visible           //div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Onesie}[title]'] and .//div[@class='cart_quantity'][text()='1']]
 
-    #step 7.3.4 : Verify Sauce Labs Fleece Jacket Title 
+    #step 7.3.5 : Verify Sauce Labs Fleece Jacket Title 
     Wait Until Element Is Visible           //div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Fleece_Jacket}[title]']]
 
-    #step 7.3.5 : Verify Sauce Labs Fleece Jacket Price
+    #step 7.3.6 : Verify Sauce Labs Fleece Jacket Price
     Wait Until Element Is Visible           //div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Fleece_Jacket}[title]'] and .//div[@class='inventory_item_price'][text()='${product_Sauce_Labs_Fleece_Jacket}[price]']]
 
-    #step 7.3.6 : Verify that product QTY = 1
+    #step 7.3.7 : Verify that product QTY = 1
     Wait Until Element Is Visible           //div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Fleece_Jacket}[title]'] and .//div[@class='cart_quantity'][text()='1']]
 
 
@@ -288,24 +303,35 @@ Verify Checkouts
 #step 7.6.1 Verify that Item total = ___
 
     ${Price_item_total}        Evaluate           ${product_Sauce_Labs_Onesie}[price] + ${product_Sauce_Labs_Fleece_Jacket}[price]
-
+    
     Wait Until Element Is Visible           //div[@data-test='subtotal-label'][text()='Item total: $' and text()='${Price_item_total}'] 
 
-    
+    ${Price_item_total}        evaluate           "%.2f" % ${Price_item_total}
+
 #step 7.7 Verify that tax = ___
     
     ${tax}    Evaluate    (${Price_item_total} * 8)/100
 
-    ${tax_item_total}    Format String    {:.2f}    ${tax}
+    ${tax_item_total}    evaluate       "%.2f" % ${tax}
+    # ${tax_item_total}    Format String    {:.2f}    ${tax}
 
     Wait Until Element Is Visible           //div[@data-test='tax-label'][text()='Tax: $' and text()='${${tax_item_total}}'] 
 
 #step 7.8 Verify that Total = ___
-    ${sum_of_item_total_with_tax}    Evaluate    ${Price_item_total} + ${tax_item_total}
-    ${sum_of_item_total_with_tax_format}    Format String    {:.2f}    ${sum_of_item_total_with_tax}
-
-    Page Should Contain Element             //div[@data-test='total-label'][text()='Total: $' and text()='${sum_of_item_total_with_tax_format}'] 
+    ${sum_of_item_total_plus_tax}    Evaluate       ${Price_item_total} + ${tax_item_total}
     
+    ${sum_of_item_total}             evaluate       "%.2f" % ${sum_of_item_total_plus_tax}
+    # ${sum_of_item_total_with_tax_format}    Format String    {:.2f}    ${sum_of_item_total_with_tax}    
+
+    ${Total}            Get Text                      //div[@class='summary_total_label']           
+    ${Total}            Remove String                           ${Total}        Total    :      $       #ลบ text Total    :      $
+    ${Total}            evaluate                       "%.2f" % ${Total}                                #ทำเป็นทศนิยม 2 ตำแหน่ง
+
+    Should Be True      ${sum_of_item_total} == ${Total} 
+
+    Page Should Contain Element             //div[@data-test='total-label'][text()='Total: $' and text()='${sum_of_item_total}'] 
+
+
 #step 7.9: Click Finish
     Click Element                           //button[@id='finish'][text()='Finish']
 
@@ -324,7 +350,3 @@ Verify thank you page
 
     #step 8.4 : Verify that Back Home button is show on page
     Wait Until Element Is Visible           //button[@id='back-to-products'][text()='Back Home'] 
-
-
-
-
