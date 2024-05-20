@@ -1,0 +1,16 @@
+Data:
+    TC01:
+      user:
+        username: standard_user     
+        pwd:  secret_sauce
+      information:
+        firstname: Bupphakon
+        lastname: Silarat
+        potal_code: 24160
+
+    # TC02:
+    #   information:
+    #     firstnam: Bupphakon
+    #     lastname: Silarat
+    #     potal_code: 24160
+

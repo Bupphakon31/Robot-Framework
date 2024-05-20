@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.9 on win32)" generated="2024-05-20T18:51:25.753895" rpa="false" schemaversion="5">
+<suite id="s1" name="Buy Product Resource" source="C:\Users\Asus FA506\Desktop\robot\buy_product_resource">
+<suite id="s1-s1" name="Test Suite" source="C:\Users\Asus FA506\Desktop\robot\buy_product_resource\test_suite">
+<suite id="s1-s1-s1" name="Re Test 1" source="C:\Users\Asus FA506\Desktop\robot\buy_product_resource\test_suite\re_test_1.robot">
+<test id="s1-s1-s1-t1" name="TC01" line="51">
+<kw name="Log Variables" owner="BuiltIn">
+<msg time="2024-05-20T18:51:26.259072" level="INFO">${/} = \</msg>
+<msg time="2024-05-20T18:51:26.260080" level="INFO">${:} = ;</msg>
+<msg time="2024-05-20T18:51:26.261088" level="INFO">${\n} = 
+</msg>
+<msg time="2024-05-20T18:51:26.261088" level="INFO">${BROWSER} = gc</msg>
+<msg time="2024-05-20T18:51:26.261088" level="INFO">&amp;{Data} = { TC01={'user': {'username': 'standard_user', 'pwd': 'secret_sauce'}, 'information': {'firstname': 'Bupphakon', 'lastname': 'Silarat', 'potal_code': 24160}} }</msg>
+<msg time="2024-05-20T18:51:26.262113" level="INFO">${DEBUG_FILE} = NONE</msg>
+<msg time="2024-05-20T18:51:26.262113" level="INFO">&amp;{dict_complete_page} = { title_Complete=//span[@class='title'][text()='Checkout: Complete!'] | image=//img[@data-test='pony-express'] | complete_header=//h2[@class='complete-header'][text()='Thank you for your order!'] | back_home_btn=//button[@id='back-to-products'][text()='Back Home'] }</msg>
+<msg time="2024-05-20T18:51:26.262113" level="INFO">&amp;{dict_information_page} = { title_information=//span[@class='title'][text()='Checkout: Your Information'] | firstname=//input[@id='first-name'] | lastname=//input[@id='last-name'] | potal_code=//input[@id='postal-code'] | continue_btn=//input[@id='continue'] }</msg>
+<msg time="2024-05-20T18:51:26.262113" level="INFO">&amp;{dict_login_page} = { login_logo=//div[@class='login_logo'][text()='Swag Labs'] | username_input=//input[@id='user-name'] | password_input=//input[@id='password'] | login_button=//input[@id='login-button'] }</msg>
+<msg time="2024-05-20T18:51:26.263242" level="INFO">&amp;{dict_overview_page} = { title_Overview=//span[@class='title'][text()='Checkout: Overview'] | Description_label=//div[@class='cart_desc_label'][text()='Description'] | shopping_cart_badge=//span[@class='shopping_cart_badge'] | cart_item=//div[@class='cart_item'] | Payment_Information_label=//div[@data-test='payment-info-label'][text()='Payment Information:'] | Payment_Information_value=//div[@data-test='payment-info-value'][text()='SauceCard #31337'] | shipping_label=//div[@data-test='shipping-info-label'][text()='Shipping Information:'] | summary_value=//div[@class='summary_value_label'][text()='Free Pony Express Delivery!'] | total_info_label=//div[@data-test='total-info-label'][text()='Price Total'] | summary_total_label=//div[@class='summary_total_label'] | finish_btn=//button[@id='finish'][text()='Finish'] }</msg>
+<msg time="2024-05-20T18:51:26.263242" level="INFO">&amp;{dict_product_page} = { title_label=//span[@class='title'][text()='Products'] | shopping_cart=//a[@class='shopping_cart_link'] | shopping_cart_badge=//span[@class='shopping_cart_badge'] | product_dropdown=//select[@class='product_sort_container'] | product_list=//div[@class='inventory_list' and .//div[@class='inventory_item' and .//div[@class='inventory_item_description']]] }</msg>
+<msg time="2024-05-20T18:51:26.263242" level="INFO">&amp;{dict_your_cart_page} = { title_label=//span[@class='title'][text()='Your Cart'] | cart_icon=//div[@id='shopping_cart_container'] | checkout_button=//button[@id='checkout'][text()='Checkout'] }</msg>
+<msg time="2024-05-20T18:51:26.263242" level="INFO">${EXECDIR} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource</msg>
+<msg time="2024-05-20T18:51:26.264251" level="INFO">${False} = False</msg>
+<msg time="2024-05-20T18:51:26.264251" level="INFO">${LOG_FILE} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource\results\log.html</msg>
+<msg time="2024-05-20T18:51:26.264251" level="INFO">${LOG_LEVEL} = INFO</msg>
+<msg time="2024-05-20T18:51:26.265257" level="INFO">${None} = None</msg>
+<msg time="2024-05-20T18:51:26.265257" level="INFO">${null} = None</msg>
+<msg time="2024-05-20T18:51:26.265257" level="INFO">&amp;{OPTIONS} = { include=[] | exclude=[] | skip=[] | skip_on_failure=[] }</msg>
+<msg time="2024-05-20T18:51:26.266610" level="INFO">${OUTPUT_DIR} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource\results</msg>
+<msg time="2024-05-20T18:51:26.266610" level="INFO">${OUTPUT_FILE} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource\results\output.xml</msg>
+<msg time="2024-05-20T18:51:26.266610" level="INFO">${PREV_TEST_MESSAGE} = </msg>
+<msg time="2024-05-20T18:51:26.266610" level="INFO">${PREV_TEST_NAME} = </msg>
+<msg time="2024-05-20T18:51:26.266610" level="INFO">${PREV_TEST_STATUS} = </msg>
+<msg time="2024-05-20T18:51:26.267873" level="INFO">&amp;{product_Sauce_Labs_Fleece_Jacket} = { title=Sauce Labs Fleece Jacket | price=49.99 }</msg>
+<msg time="2024-05-20T18:51:26.267873" level="INFO">&amp;{product_Sauce_Labs_Onesie} = { title=Sauce Labs Onesie | price=7.99 }</msg>
+<msg time="2024-05-20T18:51:26.268880" level="INFO">${REPORT_FILE} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource\results\report.html</msg>
+<msg time="2024-05-20T18:51:26.268880" level="INFO">${SERVER} = https://www.saucedemo.com</msg>
+<msg time="2024-05-20T18:51:26.268880" level="INFO">${SPACE} =  </msg>
+<msg time="2024-05-20T18:51:26.269901" level="INFO">${SUITE_DOCUMENTATION} = </msg>
+<msg time="2024-05-20T18:51:26.269901" level="INFO">&amp;{SUITE_METADATA} = { }</msg>
+<msg time="2024-05-20T18:51:26.270930" level="INFO">${SUITE_NAME} = Buy Product Resource.Test Suite.Re Test 1</msg>
+<msg time="2024-05-20T18:51:26.270930" level="INFO">${SUITE_SOURCE} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource\test_suite\re_test_1.robot</msg>
+<msg time="2024-05-20T18:51:26.271944" level="INFO">${TEMPDIR} = C:\Users\ASUSFA~1\AppData\Local\Temp</msg>
+<msg time="2024-05-20T18:51:26.271944" level="INFO">${TEST_DOCUMENTATION} = </msg>
+<msg time="2024-05-20T18:51:26.271944" level="INFO">${TEST_NAME} = TC01</msg>
+<msg time="2024-05-20T18:51:26.273018" level="INFO">@{TEST_TAGS} = [ ]</msg>
+<msg time="2024-05-20T18:51:26.273018" level="INFO">${True} = True</msg>
+<doc>Logs all variables in the current scope with given log level.</doc>
+<status status="PASS" start="2024-05-20T18:51:26.258039" elapsed="0.014979"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T18:51:26.275110" level="INFO">TC01</msg>
+<arg>${TEST_NAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T18:51:26.274024" elapsed="0.001086"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T18:51:26.277447" level="INFO">{'user': {'username': 'standard_user', 'pwd': 'secret_sauce'}, 'information': {'firstname': 'Bupphakon', 'lastname': 'Silarat', 'potal_code': 24160}}</msg>
+<arg>${Data.TC01}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T18:51:26.276374" elapsed="0.001073"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-20T18:51:26.279532" level="INFO">${test_data} = {'user': {'username': 'standard_user', 'pwd': 'secret_sauce'}, 'information': {'firstname': 'Bupphakon', 'lastname': 'Silarat', 'potal_code': 24160}}</msg>
+<var>${test_data}</var>
+<arg>${Data.${TEST_NAME}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-20T18:51:26.278526" elapsed="0.001006"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-20T18:51:26.281891" level="INFO">{'user': {'username': 'standard_user', 'pwd': 'secret_sauce'}, 'information': {'firstname': 'Bupphakon', 'lastname': 'Silarat', 'potal_code': 24160}}</msg>
+<arg>${test_data}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-20T18:51:26.280563" elapsed="0.001328"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-05-20T18:51:26.282933" level="INFO">${Test_Data} = {'user': {'username': 'standard_user', 'pwd': 'secret_sauce'}, 'information': {'firstname': 'Bupphakon', 'lastname': 'Silarat', 'potal_code': 24160}}</msg>
+<arg>${Test_Data}</arg>
+<arg>${test_data}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-05-20T18:51:26.282933" elapsed="0.001448"/>
+</kw>
+<kw name="Log Variables" owner="BuiltIn">
+<msg time="2024-05-20T18:51:26.286623" level="INFO">${/} = \</msg>
+<msg time="2024-05-20T18:51:26.286623" level="INFO">${:} = ;</msg>
+<msg time="2024-05-20T18:51:26.286623" level="INFO">${\n} = 
+</msg>
+<msg time="2024-05-20T18:51:26.287628" level="INFO">${BROWSER} = gc</msg>
+<msg time="2024-05-20T18:51:26.287628" level="INFO">&amp;{Data} = { TC01={'user': {'username': 'standard_user', 'pwd': 'secret_sauce'}, 'information': {'firstname': 'Bupphakon', 'lastname': 'Silarat', 'potal_code': 24160}} }</msg>
+<msg time="2024-05-20T18:51:26.287628" level="INFO">${DEBUG_FILE} = NONE</msg>
+<msg time="2024-05-20T18:51:26.288629" level="INFO">&amp;{dict_complete_page} = { title_Complete=//span[@class='title'][text()='Checkout: Complete!'] | image=//img[@data-test='pony-express'] | complete_header=//h2[@class='complete-header'][text()='Thank you for your order!'] | back_home_btn=//button[@id='back-to-products'][text()='Back Home'] }</msg>
+<msg time="2024-05-20T18:51:26.288629" level="INFO">&amp;{dict_information_page} = { title_information=//span[@class='title'][text()='Checkout: Your Information'] | firstname=//input[@id='first-name'] | lastname=//input[@id='last-name'] | potal_code=//input[@id='postal-code'] | continue_btn=//input[@id='continue'] }</msg>
+<msg time="2024-05-20T18:51:26.288629" level="INFO">&amp;{dict_login_page} = { login_logo=//div[@class='login_logo'][text()='Swag Labs'] | username_input=//input[@id='user-name'] | password_input=//input[@id='password'] | login_button=//input[@id='login-button'] }</msg>
+<msg time="2024-05-20T18:51:26.289630" level="INFO">&amp;{dict_overview_page} = { title_Overview=//span[@class='title'][text()='Checkout: Overview'] | Description_label=//div[@class='cart_desc_label'][text()='Description'] | shopping_cart_badge=//span[@class='shopping_cart_badge'] | cart_item=//div[@class='cart_item'] | Payment_Information_label=//div[@data-test='payment-info-label'][text()='Payment Information:'] | Payment_Information_value=//div[@data-test='payment-info-value'][text()='SauceCard #31337'] | shipping_label=//div[@data-test='shipping-info-label'][text()='Shipping Information:'] | summary_value=//div[@class='summary_value_label'][text()='Free Pony Express Delivery!'] | total_info_label=//div[@data-test='total-info-label'][text()='Price Total'] | summary_total_label=//div[@class='summary_total_label'] | finish_btn=//button[@id='finish'][text()='Finish'] }</msg>
+<msg time="2024-05-20T18:51:26.289630" level="INFO">&amp;{dict_product_page} = { title_label=//span[@class='title'][text()='Products'] | shopping_cart=//a[@class='shopping_cart_link'] | shopping_cart_badge=//span[@class='shopping_cart_badge'] | product_dropdown=//select[@class='product_sort_container'] | product_list=//div[@class='inventory_list' and .//div[@class='inventory_item' and .//div[@class='inventory_item_description']]] }</msg>
+<msg time="2024-05-20T18:51:26.290627" level="INFO">&amp;{dict_your_cart_page} = { title_label=//span[@class='title'][text()='Your Cart'] | cart_icon=//div[@id='shopping_cart_container'] | checkout_button=//button[@id='checkout'][text()='Checkout'] }</msg>
+<msg time="2024-05-20T18:51:26.290627" level="INFO">${EXECDIR} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource</msg>
+<msg time="2024-05-20T18:51:26.290627" level="INFO">${False} = False</msg>
+<msg time="2024-05-20T18:51:26.291925" level="INFO">${LOG_FILE} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource\results\log.html</msg>
+<msg time="2024-05-20T18:51:26.291925" level="INFO">${LOG_LEVEL} = INFO</msg>
+<msg time="2024-05-20T18:51:26.292924" level="INFO">${None} = None</msg>
+<msg time="2024-05-20T18:51:26.292924" level="INFO">${null} = None</msg>
+<msg time="2024-05-20T18:51:26.292924" level="INFO">&amp;{OPTIONS} = { include=[] | exclude=[] | skip=[] | skip_on_failure=[] }</msg>
+<msg time="2024-05-20T18:51:26.293925" level="INFO">${OUTPUT_DIR} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource\results</msg>
+<msg time="2024-05-20T18:51:26.293925" level="INFO">${OUTPUT_FILE} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource\results\output.xml</msg>
+<msg time="2024-05-20T18:51:26.293925" level="INFO">${PREV_TEST_MESSAGE} = </msg>
+<msg time="2024-05-20T18:51:26.295273" level="INFO">${PREV_TEST_NAME} = </msg>
+<msg time="2024-05-20T18:51:26.295273" level="INFO">${PREV_TEST_STATUS} = </msg>
+<msg time="2024-05-20T18:51:26.295273" level="INFO">&amp;{product_Sauce_Labs_Fleece_Jacket} = { title=Sauce Labs Fleece Jacket | price=49.99 }</msg>
+<msg time="2024-05-20T18:51:26.296661" level="INFO">&amp;{product_Sauce_Labs_Onesie} = { title=Sauce Labs Onesie | price=7.99 }</msg>
+<msg time="2024-05-20T18:51:26.297668" level="INFO">${REPORT_FILE} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource\results\report.html</msg>
+<msg time="2024-05-20T18:51:26.297668" level="INFO">${SERVER} = https://www.saucedemo.com</msg>
+<msg time="2024-05-20T18:51:26.298675" level="INFO">${SPACE} =  </msg>
+<msg time="2024-05-20T18:51:26.298675" level="INFO">${SUITE_DOCUMENTATION} = </msg>
+<msg time="2024-05-20T18:51:26.299761" level="INFO">&amp;{SUITE_METADATA} = { }</msg>
+<msg time="2024-05-20T18:51:26.299761" level="INFO">${SUITE_NAME} = Buy Product Resource.Test Suite.Re Test 1</msg>
+<msg time="2024-05-20T18:51:26.299761" level="INFO">${SUITE_SOURCE} = C:\Users\Asus FA506\Desktop\robot\buy_product_resource\test_suite\re_test_1.robot</msg>
+<msg time="2024-05-20T18:51:26.300783" level="INFO">${TEMPDIR} = C:\Users\ASUSFA~1\AppData\Local\Temp</msg>
+<msg time="2024-05-20T18:51:26.300783" level="INFO">&amp;{test_data} = { user={'username': 'standard_user', 'pwd': 'secret_sauce'} | information={'firstname': 'Bupphakon', 'lastname': 'Silarat', 'potal_code': 24160} }</msg>
+<msg time="2024-05-20T18:51:26.300783" level="INFO">${TEST_DOCUMENTATION} = </msg>
+<msg time="2024-05-20T18:51:26.300783" level="INFO">${TEST_NAME} = TC01</msg>
+<msg time="2024-05-20T18:51:26.301898" level="INFO">@{TEST_TAGS} = [ ]</msg>
+<msg time="2024-05-20T18:51:26.301898" level="INFO">${True} = True</msg>
+<doc>Logs all variables in the current scope with given log level.</doc>
+<status status="PASS" start="2024-05-20T18:51:26.285544" elapsed="0.016354"/>
+</kw>
+<kw name="Log Environment Variables" owner="OperatingSystem">
+<msg time="2024-05-20T18:51:26.304302" level="INFO">ACSETUPSVCPORT = 23210</msg>
+<msg time="2024-05-20T18:51:26.304302" level="INFO">ACSVCPORT = 17532</msg>
+<msg time="2024-05-20T18:51:26.304302" level="INFO">ALLUSERSPROFILE = C:\ProgramData</msg>
+<msg time="2024-05-20T18:51:26.305311" level="INFO">APPDATA = C:\Users\Asus FA506\AppData\Roaming</msg>
+<msg time="2024-05-20T18:51:26.305311" level="INFO">CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_19544_XKGJWGJTNQPQCBBJ</msg>
+<msg time="2024-05-20T18:51:26.305311" level="INFO">COLORTERM = truecolor</msg>
+<msg time="2024-05-20T18:51:26.305311" level="INFO">COMMONPROGRAMFILES = C:\Program Files\Common Files</msg>
+<msg time="2024-05-20T18:51:26.305311" level="INFO">COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files</msg>
+<msg time="2024-05-20T18:51:26.306438" level="INFO">COMMONPROGRAMW6432 = C:\Program Files\Common Files</msg>
+<msg time="2024-05-20T18:51:26.306438" level="INFO">COMPUTERNAME = DESKTOP-41SSI80</msg>
+<msg time="2024-05-20T18:51:26.306438" level="INFO">COMSPEC = C:\WINDOWS\system32\cmd.exe</msg>
+<msg time="2024-05-20T18:51:26.306438" level="INFO">DRIVERDATA = C:\Windows\System32\Drivers\DriverData</msg>
+<msg time="2024-05-20T18:51:26.307650" level="INFO">EFC_9040 = 1</msg>
+<msg time="2024-05-20T18:51:26.307650" level="INFO">FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer</msg>
+<msg time="2024-05-20T18:51:26.308658" level="INFO">FPS_BROWSER_USER_PROFILE_STRING = Default</msg>
+<msg time="2024-05-20T18:51:26.308658" level="INFO">HOMEDRIVE = C:</msg>
+<msg time="2024-05-20T18:51:26.308658" level="INFO">HOMEPATH = \Users\Asus FA506</msg>
+<msg time="2024-05-20T18:51:26.308658" level="INFO">INTEL_DEV_REDIST = C:\Program Files (x86)\Common Files\Intel\Shared Libraries\</msg>
+<msg time="2024-05-20T18:51:26.309924" level="INFO">LANG = en_US.UTF-8</msg>
+<msg time="2024-05-20T18:51:26.309924" level="INFO">LOCALAPPDATA = C:\Users\Asus FA506\AppData\Local</msg>
+<msg time="2024-05-20T18:51:26.309924" level="INFO">LOGONSERVER = \\DESKTOP-41SSI80</msg>
+<msg time="2024-05-20T18:51:26.310972" level="INFO">MIC_LD_LIBRARY_PATH = C:\Program Files (x86)\Common Files\Intel\Shared Libraries\compiler\lib\mic</msg>
+<msg time="2024-05-20T18:51:26.310972" level="INFO">NUMBER_OF_PROCESSORS = 12</msg>
+<msg time="2024-05-20T18:51:26.310972" level="INFO">ONEDRIVE = C:\Users\Asus FA506\OneDrive - Rajamangala University of Technology Thanyaburi</msg>
+<msg time="2024-05-20T18:51:26.312081" level="INFO">ONEDRIVECOMMERCIAL = C:\Users\Asus FA506\OneDrive - Rajamangala University of Technology Thanyaburi</msg>
+<msg time="2024-05-20T18:51:26.312081" level="INFO">ONEDRIVECONSUMER = C:\Users\Asus FA506\OneDrive</msg>
+<msg time="2024-05-20T18:51:26.313413" level="INFO">ORIGINAL_XDG_CURRENT_DESKTOP = undefined</msg>
+<msg time="2024-05-20T18:51:26.313413" level="INFO">OS = Windows_NT</msg>
+<msg time="2024-05-20T18:51:26.313413" level="INFO">PATH = C:\Python311\Scripts\;C:\Python311\;C:\Users\Asus FA506\AppData\Local\Programs\Python\Python312\Scripts\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Users\Asus FA506\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\chromedriver;C:\Python311\Lib\site-packages;C:\Users\Asus FA506\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.12;C:\Users\Asus FA506\AppData\Local\Microsoft\WindowsApps;C:\Users\Asus FA506\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\Asus FA506\AppData\Roaming\npm;C:\Users\dev\tooling\flutter\bin;</msg>
+<msg time="2024-05-20T18:51:26.313413" level="INFO">PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL</msg>
+<msg time="2024-05-20T18:51:26.314702" level="INFO">PROCESSOR_ARCHITECTURE = AMD64</msg>
+<msg time="2024-05-20T18:51:26.314702" level="INFO">PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD</msg>
+<msg time="2024-05-20T18:51:26.314702" level="INFO">PROCESSOR_LEVEL = 23</msg>
+<msg time="2024-05-20T18:51:26.315806" level="INFO">PROCESSOR_REVISION = 6001</msg>
+<msg time="2024-05-20T18:51:26.315806" level="INFO">PROGRAMDATA = C:\ProgramData</msg>
+<msg time="2024-05-20T18:51:26.315806" level="INFO">PROGRAMFILES = C:\Program Files</msg>
+<msg time="2024-05-20T18:51:26.317148" level="INFO">PROGRAMFILES(X86) = C:\Program Files (x86)</msg>
+<msg time="2024-05-20T18:51:26.317148" level="INFO">PROGRAMW6432 = C:\Program Files</msg>
+<msg time="2024-05-20T18:51:26.317148" level="INFO">PSMODULEPATH = C:\Users\Asus FA506\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\PowerShell\Modules\</msg>
+<msg time="2024-05-20T18:51:26.318175" level="INFO">PT8HOME = C:\Program Files\Cisco Packet Tracer 8.0</msg>
+<msg time="2024-05-20T18:51:26.318175" level="INFO">PUBLIC = C:\Users\Public</msg>
+<msg time="2024-05-20T18:51:26.318175" level="INFO">QT_DEVICE_PIXEL_RATIO = auto</msg>
+<msg time="2024-05-20T18:51:26.319182" level="INFO">RLSSVCPORT = 22112</msg>
+<msg time="2024-05-20T18:51:26.319182" level="INFO">SESSIONNAME = Console</msg>
+<msg time="2024-05-20T18:51:26.319182" level="INFO">SYSTEMDRIVE = C:</msg>
+<msg time="2024-05-20T18:51:26.320272" level="INFO">SYSTEMROOT = C:\WINDOWS</msg>
+<msg time="2024-05-20T18:51:26.320272" level="INFO">TEMP = C:\Users\ASUSFA~1\AppData\Local\Temp</msg>
+<msg time="2024-05-20T18:51:26.321278" level="INFO">TERM_PROGRAM = vscode</msg>
+<msg time="2024-05-20T18:51:26.321278" level="INFO">TERM_PROGRAM_VERSION = 1.89.1</msg>
+<msg time="2024-05-20T18:51:26.321278" level="INFO">TMP = C:\Users\ASUSFA~1\AppData\Local\Temp</msg>
+<msg time="2024-05-20T18:51:26.322307" level="INFO">USERDOMAIN = DESKTOP-41SSI80</msg>
+<msg time="2024-05-20T18:51:26.322307" level="INFO">USERDOMAIN_ROAMINGPROFILE = DESKTOP-41SSI80</msg>
+<msg time="2024-05-20T18:51:26.322307" level="INFO">USERNAME = Asus FA506</msg>
+<msg time="2024-05-20T18:51:26.323312" level="INFO">USERPROFILE = C:\Users\Asus FA506</msg>
+<msg time="2024-05-20T18:51:26.323312" level="INFO">VBOX_HWVIRTEX_IGNORE_SVM_IN_USE = 1</msg>
+<msg time="2024-05-20T18:51:26.323312" level="INFO">VS110COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\</msg>
+<msg time="2024-05-20T18:51:26.323312" level="INFO">VS120COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\</msg>
+<msg time="2024-05-20T18:51:26.324331" level="INFO">VS140COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\</msg>
+<msg time="2024-05-20T18:51:26.324331" level="INFO">VSCODE_INJECTION = 1</msg>
+<msg time="2024-05-20T18:51:26.324331" level="INFO">WINDIR = C:\WINDOWS</msg>
+<doc>Logs all environment variables using the given log level.</doc>
+<status status="PASS" start="2024-05-20T18:51:26.302903" elapsed="0.022704"/>
+</kw>
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2024-05-20T18:51:26.327799" level="INFO">${Home_Path} = C:</msg>
+<var>${Home_Path}</var>
+<arg>HOMEDRIVE</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2024-05-20T18:51:26.326786" elapsed="0.001013"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:26.330160" level="INFO">Opening browser 'gc' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=binary_location=r"${Home_Path}\\chromedriver\\chrome-win64\\chrome.exe";add_experimental_option("detach", True)</arg>
+<arg>executable_path=${Home_Path}\\chromedriver\\chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-20T18:51:26.329161" elapsed="4.120941"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.451109" elapsed="0.028853"/>
+</kw>
+<kw name="Login" owner="login_keyword">
+<kw name="Login" owner="login_page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${dict_login_page}[login_logo]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.484073" elapsed="0.013725"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_login_page}[username_input]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.498809" elapsed="0.030614"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_login_page}[password_input]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.530665" elapsed="0.024669"/>
+</kw>
+<kw name="Page Should Contain Button" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:30.571585" level="INFO">Current page contains input '//input[@id='login-button']'.</msg>
+<arg>${dict_login_page}[login_button]</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.555334" elapsed="0.016251"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:30.572592" level="INFO">Typing text 'standard_user' into text field '//input[@id='user-name']'.</msg>
+<arg>${dict_login_page}[username_input]</arg>
+<arg>${Test_Data.user.username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.571585" elapsed="0.121849"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:30.718619" level="INFO">Content of text field '//input[@id='user-name']' is 'standard_user'.</msg>
+<arg>${dict_login_page}[username_input]</arg>
+<arg>${Test_Data.user.username}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.694441" elapsed="0.024178"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:30.720625" level="INFO">Typing text 'secret_sauce' into text field '//input[@id='password']'.</msg>
+<arg>${dict_login_page}[password_input]</arg>
+<arg>${Test_Data.user.pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.718619" elapsed="0.108977"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:30.855622" level="INFO">Content of text field '//input[@id='password']' is 'secret_sauce'.</msg>
+<arg>${dict_login_page}[password_input]</arg>
+<arg>${Test_Data.user.pwd}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.827596" elapsed="0.028026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:30.856650" level="INFO">Clicking element '//input[@id='login-button']'.</msg>
+<arg>${dict_login_page}[login_button]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.855622" elapsed="0.108980"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:30.483065" elapsed="0.482554"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:30.482051" elapsed="0.483568"/>
+</kw>
+<kw name="Verify that page and Add product to cart" owner="product_page_keyword">
+<kw name="Verify Product Page" owner="product_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_product_page}[title_label]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.968831" elapsed="0.021630"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_product_page}[shopping_cart]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:30.990461" elapsed="0.020264"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:31.225226" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-20T18:51:31.226232" level="FAIL">Page should have contained element '//span[@class='shopping_cart_badge']' but did not.</msg>
+<arg>${dict_product_page}[shopping_cart_badge]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2024-05-20T18:51:31.011916" elapsed="0.216332">Page should have contained element '//span[@class='shopping_cart_badge']' but did not.</status>
+</kw>
+<msg time="2024-05-20T18:51:31.229256" level="INFO">${ver_count_of_cart} = False</msg>
+<var>${ver_count_of_cart}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${dict_product_page}[shopping_cart_badge]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.011916" elapsed="0.217340"/>
+</kw>
+<if>
+<branch type="IF" condition="${ver_count_of_cart} == ${True}">
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${ver_cart}</var>
+<arg>${dict_product_page}[shopping_cart_badge]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-20T18:51:31.230518" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-20T18:51:31.229256" elapsed="0.001262"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-20T18:51:31.231913" level="INFO">${ver_cart} = 0</msg>
+<var>${ver_cart}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.230518" elapsed="0.001395"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:31.230518" elapsed="0.001395"/>
+</branch>
+<status status="PASS" start="2024-05-20T18:51:31.229256" elapsed="0.003669"/>
+</if>
+<status status="PASS" start="2024-05-20T18:51:30.967822" elapsed="0.265103"/>
+</kw>
+<kw name="Filter product" owner="product_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:31.234435" level="INFO">Clicking element '//select[@class='product_sort_container']'.</msg>
+<arg>${dict_product_page}[product_dropdown]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.233926" elapsed="0.054067"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:31.289196" level="INFO">Selecting options from selection list '//select[@class='product_sort_container']' by value za.</msg>
+<arg>${dict_product_page}[product_dropdown]</arg>
+<arg>za</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.287993" elapsed="0.089669"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_product_page}[product_list]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.378663" elapsed="0.026799"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:31.232925" elapsed="0.173554"/>
+</kw>
+<kw name="Add product to cart" owner="product_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='inventory_item' and .//div[text()='${product_Sauce_Labs_Onesie}[title]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.407481" elapsed="0.016232"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='inventory_item' and .//div[text()='${product_Sauce_Labs_Onesie}[title]'] and .//*[@class='inventory_item_price'][text()='${product_Sauce_Labs_Onesie}[price]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.423713" elapsed="0.017052"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='inventory_item' and .//div[text()='${product_Sauce_Labs_Onesie}[title]']]//button[text()='Add to cart']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.440765" elapsed="0.016448"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:31.635908" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-20T18:51:31.636906" level="FAIL">Page should have contained element '//span[@class='shopping_cart_badge']' but did not.</msg>
+<arg>${dict_product_page}[shopping_cart_badge]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2024-05-20T18:51:31.458223" elapsed="0.179683">Page should have contained element '//span[@class='shopping_cart_badge']' but did not.</status>
+</kw>
+<msg time="2024-05-20T18:51:31.637906" level="INFO">${has_count_of_cart} = False</msg>
+<var>${has_count_of_cart}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${dict_product_page}[shopping_cart_badge]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.458223" elapsed="0.180683"/>
+</kw>
+<if>
+<branch type="IF" condition="${has_count_of_cart} == ${True}">
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${count_of_cart}</var>
+<arg>${dict_product_page}[shopping_cart_badge]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-20T18:51:31.638906" elapsed="0.001328"/>
+</kw>
+<status status="NOT RUN" start="2024-05-20T18:51:31.638906" elapsed="0.001328"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-05-20T18:51:31.641449" level="INFO">${count_of_cart} = 0</msg>
+<var>${count_of_cart}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.640234" elapsed="0.001215"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:31.640234" elapsed="0.001215"/>
+</branch>
+<status status="PASS" start="2024-05-20T18:51:31.638906" elapsed="0.002543"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:31.642458" level="INFO">Clicking element '//div[@class='inventory_item' and .//div[text()='Sauce Labs Onesie']]//button[text()='Add to cart']'.</msg>
+<arg>//div[@class='inventory_item' and .//div[text()='${product_Sauce_Labs_Onesie}[title]']]//button[text()='Add to cart']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.641449" elapsed="0.047943"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:31.721106" level="INFO">${last_count_of_cart} = 1</msg>
+<var>${last_count_of_cart}</var>
+<arg>${dict_product_page}[shopping_cart_badge]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.689392" elapsed="0.031714"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count_of_cart} + 1 == ${last_count_of_cart}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.722108" elapsed="0.001226"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='inventory_item' and .//div[text()='${product_Sauce_Labs_Fleece_Jacket}[title]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.723334" elapsed="0.037111"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='inventory_item' and .//div[text()='${product_Sauce_Labs_Fleece_Jacket}[title]'] and .//*[@class='inventory_item_price'][text()='${product_Sauce_Labs_Fleece_Jacket}[price]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.760445" elapsed="0.035596"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='inventory_item' and .//div[text()='${product_Sauce_Labs_Fleece_Jacket}[title]']]//button[text()='Add to cart']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.796041" elapsed="0.032330"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:31.842196" level="INFO">Current page contains element '//span[@class='shopping_cart_badge']'.</msg>
+<arg>${dict_product_page}[shopping_cart_badge]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.829421" elapsed="0.012775"/>
+</kw>
+<msg time="2024-05-20T18:51:31.842196" level="INFO">${has_count_of_cart} = True</msg>
+<var>${has_count_of_cart}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${dict_product_page}[shopping_cart_badge]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.829421" elapsed="0.013776"/>
+</kw>
+<if>
+<branch type="IF" condition="${has_count_of_cart} == ${True}">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:31.869426" level="INFO">${count_of_cart} = 1</msg>
+<var>${count_of_cart}</var>
+<arg>${dict_product_page}[shopping_cart_badge]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.844197" elapsed="0.026229"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:31.843197" elapsed="0.027229"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${count_of_cart}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-05-20T18:51:31.870426" elapsed="0.001000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-20T18:51:31.870426" elapsed="0.001000"/>
+</branch>
+<status status="PASS" start="2024-05-20T18:51:31.843197" elapsed="0.028229"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:31.872427" level="INFO">Clicking element '//div[@class='inventory_item' and .//div[text()='Sauce Labs Fleece Jacket']]//button[text()='Add to cart']'.</msg>
+<arg>//div[@class='inventory_item' and .//div[text()='${product_Sauce_Labs_Fleece_Jacket}[title]']]//button[text()='Add to cart']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.871426" elapsed="0.047609"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:31.937492" level="INFO">${last_count_of_cart} = 2</msg>
+<var>${last_count_of_cart}</var>
+<arg>${dict_product_page}[shopping_cart_badge]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.919035" elapsed="0.019466"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count_of_cart} + 1 == ${last_count_of_cart}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.938501" elapsed="0.001174"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:31.406479" elapsed="0.533196"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:30.966629" elapsed="0.973046"/>
+</kw>
+<kw name="Checkout Page" owner="your_cart_keyword">
+<kw name="Checkout" owner="your_cart_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:31.943733" level="INFO">Clicking element '//div[@id='shopping_cart_container']'.</msg>
+<arg>${dict_your_cart_page}[cart_icon]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:31.943733" elapsed="0.064396"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_your_cart_page}[title_label]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.008129" elapsed="0.028400"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Onesie}[title]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.037529" elapsed="0.023603"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Onesie}[title]'] and .//div[@class='inventory_item_price'][text()='${product_Sauce_Labs_Onesie}[price]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.061132" elapsed="0.017381"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Onesie}[title]'] and .//div[@class='cart_quantity'][text()='1']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.078513" elapsed="0.014408"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Onesie}[title]']]//button[text()='Remove']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.093930" elapsed="0.015595"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Fleece_Jacket}[title]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.109525" elapsed="0.017457"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Fleece_Jacket}[title]'] and .//div[@class='inventory_item_price'][text()='${product_Sauce_Labs_Fleece_Jacket}[price]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.126982" elapsed="0.016749"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Fleece_Jacket}[title]'] and .//div[@class='cart_quantity'][text()='1']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.144755" elapsed="0.016291"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Fleece_Jacket}[title]']]//button[text()='Remove']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.161046" elapsed="0.017104"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:32.179161" level="INFO">Clicking element '//button[@id='checkout'][text()='Checkout']'.</msg>
+<arg>${dict_your_cart_page}[checkout_button]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.179161" elapsed="0.047629"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:31.941710" elapsed="0.286251"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:31.940694" elapsed="0.287267"/>
+</kw>
+<kw name="input information" owner="information_keyword">
+<kw name="Input information and finish" owner="information_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_information_page}[title_information]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.230061" elapsed="0.018554"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_information_page}[firstname]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.248615" elapsed="0.017514"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_information_page}[lastname]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.266129" elapsed="0.015274"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_information_page}[potal_code]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.281403" elapsed="0.015417"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:32.297825" level="INFO">Typing text 'Bupphakon' into text field '//input[@id='first-name']'.</msg>
+<arg>${dict_information_page}[firstname]</arg>
+<arg>${Test_Data.information.firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.296820" elapsed="0.104363"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:32.429034" level="INFO">Content of text field '//input[@id='first-name']' is 'Bupphakon'.</msg>
+<arg>${dict_information_page}[firstname]</arg>
+<arg>${Test_Data.information.firstname}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.402453" elapsed="0.027587"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:32.431102" level="INFO">Typing text 'Silarat' into text field '//input[@id='last-name']'.</msg>
+<arg>${dict_information_page}[lastname]</arg>
+<arg>${Test_Data.information.lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.430040" elapsed="0.186867"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:32.665426" level="INFO">Content of text field '//input[@id='last-name']' is 'Silarat'.</msg>
+<arg>${dict_information_page}[lastname]</arg>
+<arg>${Test_Data.information.lastname}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.616907" elapsed="0.048519"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:32.667453" level="INFO">Typing text '24160' into text field '//input[@id='postal-code']'.</msg>
+<arg>${dict_information_page}[potal_code]</arg>
+<arg>${Test_Data.information.potal_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.666432" elapsed="0.108608"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:32.807024" level="INFO">Content of text field '//input[@id='postal-code']' is '24160'.</msg>
+<arg>${dict_information_page}[potal_code]</arg>
+<arg>${Test_Data.information.potal_code}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.775040" elapsed="0.031984"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:32.808022" level="INFO">Clicking element '//input[@id='continue']'.</msg>
+<arg>${dict_information_page}[continue_btn]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.808022" elapsed="0.056658"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:32.228962" elapsed="0.635718"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:32.227961" elapsed="0.636719"/>
+</kw>
+<kw name="Verify Checkouts page" owner="overview_keyword">
+<kw name="Verify Checkouts" owner="overview_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_overview_page}[title_Overview]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.867853" elapsed="0.023021"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_overview_page}[Description_label]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.890874" elapsed="0.021118"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:32.922782" level="INFO">Current page contains element '//span[@class='shopping_cart_badge']'.</msg>
+<arg>${dict_overview_page}[shopping_cart_badge]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.914158" elapsed="0.008624"/>
+</kw>
+<msg time="2024-05-20T18:51:32.922782" level="INFO">${is_count_of_cart} = True</msg>
+<var>${is_count_of_cart}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${dict_overview_page}[shopping_cart_badge]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.913148" elapsed="0.010634"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_count_of_cart} == ${True}">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:32.939842" level="INFO">${last_cart} = 2</msg>
+<var>${last_cart}</var>
+<arg>${dict_overview_page}[shopping_cart_badge]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.923782" elapsed="0.016060"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:32.923782" elapsed="0.016060"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${last_cart}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-05-20T18:51:32.941198" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-05-20T18:51:32.941198" elapsed="0.001011"/>
+</branch>
+<status status="PASS" start="2024-05-20T18:51:32.923782" elapsed="0.018427"/>
+</if>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:32.952359" level="INFO">${cart_count} = 2</msg>
+<var>${cart_count}</var>
+<arg>${dict_overview_page}[cart_item]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.942209" elapsed="0.010150"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${cart_count} == ${last_cart}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.953369" elapsed="0.000999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Onesie}[title]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.954368" elapsed="0.014166"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Onesie}[title]'] and .//div[@class='inventory_item_price'][text()='${product_Sauce_Labs_Onesie}[price]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.969534" elapsed="0.013005"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Onesie}[title]'] and .//div[@class='cart_quantity'][text()='1']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.982539" elapsed="0.015035"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Fleece_Jacket}[title]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:32.998614" elapsed="0.014369"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Fleece_Jacket}[title]'] and .//div[@class='inventory_item_price'][text()='${product_Sauce_Labs_Fleece_Jacket}[price]']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.013991" elapsed="0.021761"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='cart_item' and .//div[@class='inventory_item_name'][text()='${product_Sauce_Labs_Fleece_Jacket}[title]'] and .//div[@class='cart_quantity'][text()='1']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.036810" elapsed="0.016503"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_overview_page}[Payment_Information_label]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.053313" elapsed="0.020577"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_overview_page}[Payment_Information_value]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.073890" elapsed="0.017559"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:33.101728" level="INFO">Current page contains element '//div[@data-test='shipping-info-label'][text()='Shipping Information:']'.</msg>
+<arg>${dict_overview_page}[shipping_label]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.092458" elapsed="0.010270"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_overview_page}[summary_value]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.102728" elapsed="0.020224"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_overview_page}[total_info_label]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.124006" elapsed="0.015531"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-20T18:51:33.140538" level="INFO">${Price_item_total} = 57.980000000000004</msg>
+<var>${Price_item_total}</var>
+<arg>${product_Sauce_Labs_Onesie}[price] + ${product_Sauce_Labs_Fleece_Jacket}[price]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.140538" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@data-test='subtotal-label'][text()='Item total: $' and text()='${Price_item_total}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.141835" elapsed="0.026560"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-20T18:51:33.169478" level="INFO">${Price_item_total} = 57.98</msg>
+<var>${Price_item_total}</var>
+<arg>"%.2f" % ${Price_item_total}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.168395" elapsed="0.001083"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-20T18:51:33.171499" level="INFO">${tax} = 4.6384</msg>
+<var>${tax}</var>
+<arg>(${Price_item_total} * 8)/100</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.170499" elapsed="0.001000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-20T18:51:33.172738" level="INFO">${tax_item_total} = 4.64</msg>
+<var>${tax_item_total}</var>
+<arg>"%.2f" % ${tax}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.171499" elapsed="0.001239"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@data-test='tax-label'][text()='Tax: $' and text()='${${tax_item_total}}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.173821" elapsed="0.024685"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-20T18:51:33.199508" level="INFO">${sum_of_item_total_plus_tax} = 62.62</msg>
+<var>${sum_of_item_total_plus_tax}</var>
+<arg>${Price_item_total} + ${tax_item_total}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.198506" elapsed="0.001002"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:33.228829" level="INFO">${Total} = Total: $62.62</msg>
+<var>${Total}</var>
+<arg>${dict_overview_page}[summary_total_label]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.200709" elapsed="0.028120"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2024-05-20T18:51:33.229829" level="INFO">${Total} =  62.62</msg>
+<var>${Total}</var>
+<arg>${Total}</arg>
+<arg>Total</arg>
+<arg>:</arg>
+<arg>$</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.228829" elapsed="0.002001"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-20T18:51:33.231830" level="INFO">${Total} = 62.62</msg>
+<var>${Total}</var>
+<arg>"%.2f" % ${Total}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.230830" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${sum_of_item_total_plus_tax} == ${Total}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.232831" elapsed="0.000999"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:33.249773" level="INFO">Current page contains element '//div[@data-test='total-label'][text()='Total: $' and text()='62.62']'.</msg>
+<arg>//div[@data-test='total-label'][text()='Total: $' and text()='${sum_of_item_total_plus_tax}']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.233830" elapsed="0.015943"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-20T18:51:33.250773" level="INFO">Clicking element '//button[@id='finish'][text()='Finish']'.</msg>
+<arg>${dict_overview_page}[finish_btn]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.250773" elapsed="0.086592"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:32.866854" elapsed="0.471686"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:32.865854" elapsed="0.472686"/>
+</kw>
+<kw name="Verify Complete Page" owner="complete_keyword">
+<kw name="Verify thank you page" owner="complete_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_complete_page}[title_Complete]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.342035" elapsed="0.039992"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_complete_page}[image]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.382027" elapsed="0.042510"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_complete_page}[complete_header]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.425587" elapsed="0.045243"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dict_complete_page}[back_home_btn]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-20T18:51:33.471830" elapsed="0.034241"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:33.340004" elapsed="0.166067"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:33.338540" elapsed="0.167531"/>
+</kw>
+<status status="PASS" start="2024-05-20T18:51:26.256016" elapsed="7.251086"/>
+</test>
+<status status="PASS" start="2024-05-20T18:51:25.851013" elapsed="7.657098"/>
+</suite>
+<status status="PASS" start="2024-05-20T18:51:25.844606" elapsed="7.666883"/>
+</suite>
+<status status="PASS" start="2024-05-20T18:51:25.770100" elapsed="7.743391"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Buy Product Resource">Buy Product Resource</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Suite">Buy Product Resource.Test Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Re Test 1">Buy Product Resource.Test Suite.Re Test 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
