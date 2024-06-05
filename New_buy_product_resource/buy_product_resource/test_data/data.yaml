@@ -1,0 +1,67 @@
+Data:
+    Buy_2_Product_Success:
+      config_browser:
+        server:   https://www.saucedemo.com
+        browser:  gc
+
+      login_data:
+        input_data:
+          username: standard_user     
+          pwd:  secret_sauce
+        expected_data:
+          username:  standard_user
+          pwd:  secret_sauce
+
+      verify_product_page:
+        input_data:
+          sauce_labs_backpack:
+            title: Sauce Labs Onesie
+            price: 7.99
+          sauce_labs_fleece_jacket:
+            title: Sauce Labs Fleece Jacket
+            price: 49.99
+        expected_data: 
+          sauce_labs_backpack:
+            title: Sauce Labs Onesie
+            price: 7.99
+          sauce_labs_fleece_jacket:
+            title: Sauce Labs Fleece Jacket
+            price: 49.99
+              
+      verify_your_cart_page:
+        data_test:
+          expected_data: 
+            sauce_labs_backpack:
+              title: Sauce Labs Onesie
+              price: 7.99
+              qty: 1
+            sauce_labs_fleece_jacket:
+              title: Sauce Labs Fleece Jacket
+              price: 49.99
+              qty: 1
+
+      verify_overview_page:
+        data_test:
+          expected_data: 
+            sauce_labs_backpack:
+              title: Sauce Labs Onesie
+              price: 7.99
+              qty: 1
+            sauce_labs_fleece_jacket:
+              title: Sauce Labs Fleece Jacket
+              price: 49.99
+              qty: 1
+
+      verify_information_page:
+        information_data:
+          input_data:
+            first_name: Bupphakon
+            last_name: Silarat
+            potal_code: 24160
+          expected_data:
+            first_name: Bupphakon
+            last_name: Silarat
+            potal_code: 24160
+
+
+
