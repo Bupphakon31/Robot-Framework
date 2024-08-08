@@ -1,0 +1,1529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.9 on win32)" generated="2024-08-07T20:41:15.377928" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Central" source="C:\Users\Asus FA506\Desktop\robot_central">
+<suite id="s1-s1" name="Test Suite" source="C:\Users\Asus FA506\Desktop\robot_central\test_suite">
+<suite id="s1-s1-s1" name="Ct" source="C:\Users\Asus FA506\Desktop\robot_central\test_suite\ct.robot">
+<test id="s1-s1-s1-t1" name="TC_01" line="52">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:15.679418" level="INFO">Opening browser 'gc' to base url 'https://www.central.co.th/'.</msg>
+<arg>https://www.central.co.th/</arg>
+<arg>gc</arg>
+<arg>options=binary_location=r"C:\\chromedriver\\chrome-win64\\chrome.exe";add_experimental_option("detach", True);add_experimental_option("prefs",${prefs});add_argument("--disable-notifications")</arg>
+<arg>executable_path=C:\\chromedriver\\chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-07T20:41:15.678414" elapsed="5.384867"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-07T20:41:21.064282" elapsed="0.777683"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//iframe[@title='Modal Message']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:21.841965" elapsed="0.312989"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:22.156955" level="INFO">Selecting frame '//iframe[@title='Modal Message']'.</msg>
+<arg>//iframe[@title='Modal Message']</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-08-07T20:41:22.156955" elapsed="0.134054"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@page-id='email-capture']//button[@aria-label='Close Message']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:22.292010" elapsed="0.791345"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:23.086359" level="INFO">Clicking element '//*[@page-id='email-capture']//button[@aria-label='Close Message']'.</msg>
+<arg>//*[@page-id='email-capture']//button[@aria-label='Close Message']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:23.085358" elapsed="1.085924"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-08-07T20:41:24.176283" elapsed="0.036009"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[@id='siteLangNavbtn'][normalize-space(text())='English']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:24.222295" elapsed="0.398148"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:24.626441" level="INFO">Clicking element '//button[@id='siteLangNavbtn'][normalize-space(text())='English']'.</msg>
+<arg>//button[@id='siteLangNavbtn'][normalize-space(text())='English']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:24.625440" elapsed="0.685936"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//img[@alt='ENG-Lang-Logo']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:25.319379" elapsed="0.195233"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:25.518614" level="INFO">Clicking element '//img[@alt='ENG-Lang-Logo']'.</msg>
+<arg>//img[@alt='ENG-Lang-Logo']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:25.517613" elapsed="2.481543"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//input[@data-testid='txt-searchProductList-searchQuery']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:28.000157" elapsed="0.459195"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:28.535883" level="INFO">Element '//input[@data-testid='txt-searchProductList-searchQuery']' attribute 'placeholder' contains value 'Search for products and brands'.</msg>
+<arg>//input[@data-testid='txt-searchProductList-searchQuery']</arg>
+<arg>placeholder</arg>
+<arg>Search for products and brands</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2024-08-07T20:41:28.461862" elapsed="0.074021"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:28.582420" level="INFO">${current_url} = https://www.central.co.th/en</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-08-07T20:41:28.547894" elapsed="0.035523"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>https://www.central.co.th/en</arg>
+<arg>${current_url}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-08-07T20:41:28.584418" elapsed="0.000999"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:28.635741" level="INFO">Current page contains element '//*[@alt='CentralLogo']'.</msg>
+<arg>//*[@alt='CentralLogo']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:28.585417" elapsed="0.051320"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:28.673258" level="INFO">Current page contains element '//*[@alt='CentralLogo']'.</msg>
+<arg>//*[@alt='CentralLogo']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:28.636737" elapsed="0.036521"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:28.756171" level="INFO">Current page contains element '//*[@id='userOutWishlist']'.</msg>
+<arg>//*[@id='userOutWishlist']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:28.675261" elapsed="0.080910"/>
+</kw>
+<kw name="Input Text For Auto Complate">
+<kw name="Convert To List" owner="Collections">
+<msg time="2024-08-07T20:41:28.759169" level="INFO">${text_list} = ['d', 'i', 'o', 'r']</msg>
+<var>${text_list}</var>
+<arg>dior</arg>
+<doc>Converts the given ``item`` to a Python ``list`` type.</doc>
+<status status="PASS" start="2024-08-07T20:41:28.759169" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:28.760169" level="INFO">Typing text 'd' into text field '//input[@data-testid='txt-searchProductList-searchQuery']'.</msg>
+<arg>${locator}</arg>
+<arg>${text_list}[0]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:28.760169" elapsed="0.706538"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-07T20:41:29.969173" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-07T20:41:29.467706" elapsed="0.501467"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:29.970179" level="INFO">Typing text 'i' into text field '//input[@data-testid='txt-searchProductList-searchQuery']'.</msg>
+<arg>${locator}</arg>
+<arg>${text_list}[${index}]</arg>
+<arg>clear=${False}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:29.969173" elapsed="0.189487"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-08-07T20:41:29.467706" elapsed="0.691955"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-07T20:41:30.662208" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-07T20:41:30.160664" elapsed="0.501544"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:30.663212" level="INFO">Typing text 'o' into text field '//input[@data-testid='txt-searchProductList-searchQuery']'.</msg>
+<arg>${locator}</arg>
+<arg>${text_list}[${index}]</arg>
+<arg>clear=${False}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:30.662208" elapsed="7.690280"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-08-07T20:41:30.159661" elapsed="8.192827"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-07T20:41:38.854213" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-07T20:41:38.353490" elapsed="0.501236"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:38.854726" level="INFO">Typing text 'r' into text field '//input[@data-testid='txt-searchProductList-searchQuery']'.</msg>
+<arg>${locator}</arg>
+<arg>${text_list}[${index}]</arg>
+<arg>clear=${False}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:38.854726" elapsed="1.577515"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-08-07T20:41:38.352488" elapsed="2.079753"/>
+</iter>
+<var>${index}</var>
+<value>1</value>
+<value>len(${text_list})</value>
+<status status="PASS" start="2024-08-07T20:41:29.466707" elapsed="10.965534"/>
+</for>
+<arg>//input[@data-testid='txt-searchProductList-searchQuery']</arg>
+<arg>dior</arg>
+<status status="PASS" start="2024-08-07T20:41:28.757168" elapsed="11.675073"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:40.459200" level="INFO">Content of text field '//input[@data-testid='txt-searchProductList-searchQuery']' is 'dior'.</msg>
+<arg>//input[@data-testid='txt-searchProductList-searchQuery']</arg>
+<arg>dior</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:41:40.433245" elapsed="0.025955"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[text()='Search Result']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:40.459200" elapsed="0.016897"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='bannerImageView']/a[@href='/en/dior']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:40.476097" elapsed="2.949281"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:48.746503" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-07T20:41:48.746503" level="FAIL">Element '//span[contains(@class, 'cartCountInHeader')]' not visible after 5 seconds.</msg>
+<arg>//span[contains(@class, 'cartCountInHeader')]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-08-07T20:41:43.427380" elapsed="5.323322">Element '//span[contains(@class, 'cartCountInHeader')]' not visible after 5 seconds.</status>
+</kw>
+<msg time="2024-08-07T20:41:48.751727" level="INFO">${is_cart_count_visible} = False</msg>
+<var>${is_cart_count_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//span[contains(@class, 'cartCountInHeader')]</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-07T20:41:43.426379" elapsed="5.325348"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_cart_count_visible} == ${True}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[contains(@class, 'cartCountInHeader')][text()='${count_of_bag}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-08-07T20:41:48.753731" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-08-07T20:41:48.752727" elapsed="0.001004"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-08-07T20:41:48.754872" level="INFO">${count_of_bag} = 0</msg>
+<var>${count_of_bag}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-08-07T20:41:48.754872" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-08-07T20:41:48.753731" elapsed="0.001141"/>
+</branch>
+<status status="PASS" start="2024-08-07T20:41:48.752727" elapsed="0.002145"/>
+</if>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:48.804732" level="INFO">${temp_id} = </msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:48.756895" elapsed="0.047837"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:48.805749" level="INFO">Assigning temporary id 'id_for_scroll' to element '//*[@class='flip-card-front']//a[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:48.805749" elapsed="0.021644"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:48.828405" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:48.827393" elapsed="0.006194"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:48.834612" level="INFO">Assigning temporary id '' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:48.834612" elapsed="0.269742"/>
+</kw>
+<arg>//*[@class='flip-card-front']//a[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']</arg>
+<status status="PASS" start="2024-08-07T20:41:48.755883" elapsed="0.348471"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:49.125230" level="INFO">Current page contains element '//*[@data-product-sku="CDS89295700"]//img'.</msg>
+<arg>//*[@data-product-sku="CDS89295700"]//img</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.104354" elapsed="0.020876"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2024-08-07T20:41:49.126260" level="INFO">${price_with_format} = ฿1,845</msg>
+<var>${price_with_format}</var>
+<arg>฿{:,}</arg>
+<arg>${product_01}[price]</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.126260" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:49.155894" level="INFO">Element '//*[@data-product-sku='CDS89295700']//h4[@class='finalPrice'][text()='฿1,845']' is displayed.</msg>
+<arg>//*[@data-product-sku='CDS89295700']//h4[@class='finalPrice'][text()='${price_with_format}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.127283" elapsed="0.028611"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:49.184800" level="INFO">Element '//*[@data-product-sku='CDS89295700']//a[@class='sliderTitle'][text()= 'DIOR']' is displayed.</msg>
+<arg>//*[@data-product-sku='CDS89295700']//a[@class='sliderTitle'][text()= 'DIOR']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.156897" elapsed="0.027903"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:49.185808" level="INFO">Verifying element '//*[@data-product-sku='CDS89295700']//a[@class='sliderTitle']' contains exact text 'DIOR'.</msg>
+<arg>//*[@data-product-sku='CDS89295700']//a[@class='sliderTitle']</arg>
+<arg>DIOR</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.185808" elapsed="0.036681"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:49.245447" level="INFO">Element '//*[@data-product-sku='CDS89295700']//a[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']' is displayed.</msg>
+<arg>//*[@data-product-sku='CDS89295700']//a[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.222489" elapsed="0.022958"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:49.338519" level="INFO">Element '//*[@data-product-sku='CDS89295700']//span[contains(@class,'home-delivery-badge')][text()='Home Delivery']' is displayed.</msg>
+<arg>//*[@data-product-sku='CDS89295700']//span[contains(@class,'home-delivery-badge')][text()='Home Delivery']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.246473" elapsed="0.093139"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:49.340620" level="INFO">Simulating Mouse Over on element '//*[@data-product-sku="CDS89295700"]'.</msg>
+<arg>//*[@data-product-sku="CDS89295700"]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.340620" elapsed="0.321027"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@data-product-sku="CDS89295700"]//button/label[text()='WISHLIST']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.661647" elapsed="0.027243"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:49.715795" level="INFO">Element '//*[@data-product-sku="CDS89295700"]//button/span[text()='ADD TO BAG']' is displayed.</msg>
+<arg>//*[@data-product-sku="CDS89295700"]//button/span[text()='ADD TO BAG']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.688890" elapsed="0.026905"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:49.717069" level="INFO">Clicking button '//*[@data-product-sku="CDS89295700"]//button[./span[text()='ADD TO BAG'] ]'.</msg>
+<arg>//*[@data-product-sku="CDS89295700"]//button[./span[text()='ADD TO BAG'] ]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.715795" elapsed="0.230500"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[contains(@class, 'cartCountInHeader')]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.948301" elapsed="1.291555"/>
+</kw>
+<msg time="2024-08-07T20:41:51.239856" level="INFO">${is_cart_count_visible} = True</msg>
+<var>${is_cart_count_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//span[contains(@class, 'cartCountInHeader')]</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-07T20:41:49.947300" elapsed="1.292556"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_cart_count_visible} == ${True}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-07T20:41:51.243096" level="INFO">${count_of_bag} = 1</msg>
+<var>${count_of_bag}</var>
+<arg>${count_of_bag} + ${product_01}[qty]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.242033" elapsed="0.001063"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[contains(@class, 'cartCountInHeader')][text()='${count_of_bag}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.243096" elapsed="0.084235"/>
+</kw>
+<status status="PASS" start="2024-08-07T20:41:51.241028" elapsed="0.086303"/>
+</branch>
+<status status="PASS" start="2024-08-07T20:41:51.241028" elapsed="0.086303"/>
+</if>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[contains(@class, 'cartCountInHeader')]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.328341" elapsed="0.016304"/>
+</kw>
+<msg time="2024-08-07T20:41:51.344645" level="INFO">${is_cart_count_visible} = True</msg>
+<var>${is_cart_count_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//span[contains(@class, 'cartCountInHeader')]</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.327331" elapsed="0.017314"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_cart_count_visible} == ${True}">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[contains(@class, 'cartCountInHeader')][text()='${count_of_bag}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.345739" elapsed="0.026501"/>
+</kw>
+<status status="PASS" start="2024-08-07T20:41:51.345739" elapsed="0.026501"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${count_of_bag}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-08-07T20:41:51.373258" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-08-07T20:41:51.372240" elapsed="0.001018"/>
+</branch>
+<status status="PASS" start="2024-08-07T20:41:51.345739" elapsed="0.027519"/>
+</if>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:51.398687" level="INFO">${temp_id} = </msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.374270" elapsed="0.024417"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:51.399691" level="INFO">Assigning temporary id 'id_for_scroll' to element '//*[@class='flip-card-front']//a[text()="Dior Homme Intense  Eau de Parfum intense 100 mL"]'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.398687" elapsed="0.024157"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:51.423853" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.423853" elapsed="0.028917"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:51.453796" level="INFO">Assigning temporary id '' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.452770" elapsed="0.223328"/>
+</kw>
+<arg>//*[@class='flip-card-front']//a[text()="Dior Homme Intense \ Eau de Parfum intense 100 mL"]</arg>
+<status status="PASS" start="2024-08-07T20:41:51.373258" elapsed="0.302840"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:51.695681" level="INFO">Current page contains element '//*[@data-product-sku="CDS6340728"]//img'.</msg>
+<arg>//*[@data-product-sku="CDS6340728"]//img</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.677102" elapsed="0.018579"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2024-08-07T20:41:51.698154" level="INFO">${price_with_format} = ฿5,085</msg>
+<var>${price_with_format}</var>
+<arg>฿{:,}</arg>
+<arg>${product_02}[price]</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.697143" elapsed="0.001011"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:51.729257" level="INFO">Element '//*[@data-product-sku='CDS6340728']//h4[@class='finalPrice'][text()='฿5,085']' is displayed.</msg>
+<arg>//*[@data-product-sku='CDS6340728']//h4[@class='finalPrice'][text()='${price_with_format}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.699507" elapsed="0.029750"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:51.757126" level="INFO">Element '//*[@data-product-sku='CDS6340728']//a[@class='sliderTitle'][text()= 'DIOR']' is displayed.</msg>
+<arg>//*[@data-product-sku='CDS6340728']//a[@class='sliderTitle'][text()= 'DIOR']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.730317" elapsed="0.027852"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:51.785402" level="INFO">Element '//*[@data-product-sku='CDS6340728']//a[text()="Dior Homme Intense  Eau de Parfum intense 100 mL"]' is displayed.</msg>
+<arg>//*[@data-product-sku='CDS6340728']//a[text()="Dior Homme Intense \ Eau de Parfum intense 100 mL"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.758169" elapsed="0.027233"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:51.813619" level="INFO">Element '//*[@data-product-sku='CDS6340728']//span[contains(@class,'home-delivery-badge')][text()='Home Delivery']' is displayed.</msg>
+<arg>//*[@data-product-sku='CDS6340728']//span[contains(@class,'home-delivery-badge')][text()='Home Delivery']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.786435" elapsed="0.027184"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:51.814632" level="INFO">Simulating Mouse Over on element '//*[@data-product-sku="CDS6340728"]'.</msg>
+<arg>//*[@data-product-sku="CDS6340728"]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:51.814632" elapsed="0.300690"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@data-product-sku="CDS6340728"]//button/label[text()='WISHLIST']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:52.115322" elapsed="0.024670"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:52.169690" level="INFO">Element '//*[@data-product-sku="CDS6340728"]//button/span[text()='ADD TO BAG']' is displayed.</msg>
+<arg>//*[@data-product-sku="CDS6340728"]//button/span[text()='ADD TO BAG']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:52.140996" elapsed="0.028694"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:52.171042" level="INFO">Clicking button '//*[@data-product-sku="CDS6340728"]//button[./span[text()='ADD TO BAG'] ]'.</msg>
+<arg>//*[@data-product-sku="CDS6340728"]//button[./span[text()='ADD TO BAG'] ]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:52.169690" elapsed="0.201428"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[contains(@class, 'cartCountInHeader')]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:52.372126" elapsed="0.025679"/>
+</kw>
+<msg time="2024-08-07T20:41:52.397805" level="INFO">${is_cart_count_visible} = True</msg>
+<var>${is_cart_count_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//span[contains(@class, 'cartCountInHeader')]</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-07T20:41:52.371118" elapsed="0.027691"/>
+</kw>
+<if>
+<branch type="IF" condition="${is_cart_count_visible} == ${True}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-07T20:41:52.399811" level="INFO">${count_of_bag} = 2</msg>
+<var>${count_of_bag}</var>
+<arg>${count_of_bag} + ${product_01}[qty]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-07T20:41:52.399811" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[contains(@class, 'cartCountInHeader')][text()='${count_of_bag}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:52.400819" elapsed="0.913618"/>
+</kw>
+<status status="PASS" start="2024-08-07T20:41:52.398809" elapsed="0.915628"/>
+</branch>
+<status status="PASS" start="2024-08-07T20:41:52.398809" elapsed="0.915628"/>
+</if>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:53.315440" level="INFO">Clicking element '//a[@data-testid='btn-viewCart-bag']'.</msg>
+<arg>//a[@data-testid='btn-viewCart-bag']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:53.314437" elapsed="0.162862"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2[text()='Shopping Bag']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:53.478295" elapsed="0.611844"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//section[.//a[@data-testid='lnk-viewCart-SellerCentral Department Store'] and .//p[.='Sold by Central Department Store']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:54.091201" elapsed="2.680758"/>
+</kw>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:56.900613" level="INFO">${temp_id} = CDS89295700</msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:56.773988" elapsed="0.126625"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:56.901628" level="INFO">Assigning temporary id 'id_for_scroll' to element '//section[@id='CDS89295700']'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:56.900613" elapsed="0.027713"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:56.928326" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:56.928326" elapsed="0.005291"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:56.934639" level="INFO">Assigning temporary id 'CDS89295700' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:56.933617" elapsed="0.023460"/>
+</kw>
+<arg>//section[@id='CDS89295700']</arg>
+<status status="PASS" start="2024-08-07T20:41:56.772980" elapsed="0.185181"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:56.959558" level="INFO">Verifying element '//section[@id='CDS89295700']//a[@class='spc-product-card__card-brand-name']' contains exact text 'DIOR'.</msg>
+<arg>//section[@id='CDS89295700']//a[@class='spc-product-card__card-brand-name']</arg>
+<arg>DIOR</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:41:56.958161" elapsed="0.021102"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:56.991037" level="INFO">Current page contains element '//section[@id='CDS89295700']//a[starts-with(@class,'spc-product-card__card-nam')][text()='La Mousse OFF/ON Foaming Cleanser 150 mL']'.</msg>
+<arg>//section[@id='CDS89295700']//a[starts-with(@class,'spc-product-card__card-nam')][text()='La Mousse OFF/ON Foaming Cleanser 150 mL']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:56.979263" elapsed="0.011774"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2024-08-07T20:41:56.992036" level="INFO">${price_with_format} = ฿1,845</msg>
+<var>${price_with_format}</var>
+<arg>฿{:,}</arg>
+<arg>${product_01}[price]</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:56.992036" elapsed="0.001119"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.035437" level="INFO">Current page contains element '//section[@id='CDS89295700']//*[@class='spc-product-card__card-price-wrap']/*[starts-with(@class,'spc-product-card__card-price')][normalize-space(.)='฿1,845']'.</msg>
+<arg>//section[@id='CDS89295700']//*[@class='spc-product-card__card-price-wrap']/*[starts-with(@class,'spc-product-card__card-price')][normalize-space(.)='${price_with_format}']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:56.993155" elapsed="0.042282"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.036466" level="INFO">Verifying element '//section[@id='CDS89295700']//span[starts-with(@class,'spc-product-card__card-quantity')]' contains exact text '1'.</msg>
+<arg>//section[@id='CDS89295700']//span[starts-with(@class,'spc-product-card__card-quantity')]</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.036466" elapsed="0.028050"/>
+</kw>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.083753" level="INFO">${temp_id} = CDS6340728</msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.065538" elapsed="0.018215"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.084972" level="INFO">Assigning temporary id 'id_for_scroll' to element '//section[@id='CDS6340728']'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.084972" elapsed="0.025229"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.112210" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.110201" elapsed="0.007542"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.118750" level="INFO">Assigning temporary id 'CDS6340728' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.117743" elapsed="0.024309"/>
+</kw>
+<arg>//section[@id='CDS6340728']</arg>
+<status status="PASS" start="2024-08-07T20:41:57.064516" elapsed="0.077536"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.143059" level="INFO">Verifying element '//section[@id='CDS6340728']//a[@class='spc-product-card__card-brand-name']' contains exact text 'DIOR'.</msg>
+<arg>//section[@id='CDS6340728']//a[@class='spc-product-card__card-brand-name']</arg>
+<arg>DIOR</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.142052" elapsed="0.020683"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.174798" level="INFO">Current page contains element '//section[@id='CDS6340728']//a[starts-with(@class,'spc-product-card__card-nam')][text()="Dior Homme Intense  Eau de Parfum intense 100 mL"]'.</msg>
+<arg>//section[@id='CDS6340728']//a[starts-with(@class,'spc-product-card__card-nam')][text()="Dior Homme Intense \ Eau de Parfum intense 100 mL"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.162735" elapsed="0.013105"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2024-08-07T20:41:57.176873" level="INFO">${price_with_format} = ฿5,085</msg>
+<var>${price_with_format}</var>
+<arg>฿{:,}</arg>
+<arg>${product_02}[price]</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.175840" elapsed="0.001033"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.191416" level="INFO">Current page contains element '//section[@id='CDS6340728']//*[@class='spc-product-card__card-price-wrap']/*[starts-with(@class,'spc-product-card__card-price')][normalize-space(.)='฿5,085']'.</msg>
+<arg>//section[@id='CDS6340728']//*[@class='spc-product-card__card-price-wrap']/*[starts-with(@class,'spc-product-card__card-price')][normalize-space(.)='${price_with_format}']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.178010" elapsed="0.014405"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.193542" level="INFO">Verifying element '//section[@id='CDS6340728']//span[starts-with(@class,'spc-product-card__card-quantity')]' contains exact text '1'.</msg>
+<arg>//section[@id='CDS6340728']//span[starts-with(@class,'spc-product-card__card-quantity')]</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.192415" elapsed="0.020701"/>
+</kw>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.234124" level="INFO">${temp_id} = </msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.215264" elapsed="0.018860"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.235158" level="INFO">Assigning temporary id 'id_for_scroll' to element '//section[@class='spc-section-title']//h3[text()='Free Gifts and Gift Wrapping']'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.235158" elapsed="0.017777"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.252935" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.252935" elapsed="0.005103"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.259106" level="INFO">Assigning temporary id '' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.259106" elapsed="0.026085"/>
+</kw>
+<arg>//section[@class='spc-section-title']//h3[text()='Free Gifts and Gift Wrapping']</arg>
+<status status="PASS" start="2024-08-07T20:41:57.214124" elapsed="0.071067"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//section[@id='freeGiftsBtn']/span[@class='spc-feature-list-item__gift-count'][text()='4']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.285191" elapsed="0.086810"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.384388" level="INFO">Current page contains element '//section[@id='freeGiftsBtn']/span[@class='spc-feature-list-item__list-label'][normalize-space(text())='Free gift(s) with this order']'.</msg>
+<arg>//section[@id='freeGiftsBtn']/span[@class='spc-feature-list-item__list-label'][normalize-space(text())='Free gift(s) with this order']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.372001" elapsed="0.013405"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.398076" level="INFO">Current page contains element '//section[@id='giftWrappingBtn']/span[@class='spc-feature-list-item__list-label'][normalize-space(text())='Gift Wrapping Available']'.</msg>
+<arg>//section[@id='giftWrappingBtn']/span[@class='spc-feature-list-item__list-label'][normalize-space(text())='Gift Wrapping Available']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.385406" elapsed="0.013688"/>
+</kw>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.421875" level="INFO">${temp_id} = </msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.400108" elapsed="0.022796"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.423920" level="INFO">Assigning temporary id 'id_for_scroll' to element '//*[@id='spcCouponsPricing']//p[@class='spc-feature-list-item__redeem-title'][normalize-space(.)='You can earn 278 Points']'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.422904" elapsed="0.021001"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.444924" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.443905" elapsed="0.005464"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.450373" level="INFO">Assigning temporary id '' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.450373" elapsed="0.019625"/>
+</kw>
+<arg>//*[@id='spcCouponsPricing']//p[@class='spc-feature-list-item__redeem-title'][normalize-space(.)='You can earn 278 Points']</arg>
+<status status="PASS" start="2024-08-07T20:41:57.399094" elapsed="0.070904"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcCouponsPricing']//p[@class='spc-feature-list-item__redeem-title'][normalize-space(.)='You can earn 278 Points']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.471015" elapsed="0.019542"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcCouponsPricing']//h3[@class='spc-section-title__title'][text()='Coupons and Vouchers']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.490557" elapsed="0.024305"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.531525" level="INFO">Current page contains element '//*[@id='spcCouponsPricing']//input[@data-testid='txt-formCart-applyCoupon'][@placeholder='Enter a coupon code']'.</msg>
+<arg>//*[@id='spcCouponsPricing']//input[@data-testid='txt-formCart-applyCoupon'][@placeholder='Enter a coupon code']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.515989" elapsed="0.016583"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.550424" level="INFO">Current page contains element '//*[@id='spcCouponsPricing']//button[@data-testid='btn-addCart-applyCoupon'][text()='Apply']'.</msg>
+<arg>//*[@id='spcCouponsPricing']//button[@data-testid='btn-addCart-applyCoupon'][text()='Apply']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.532572" elapsed="0.017852"/>
+</kw>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.575608" level="INFO">${temp_id} = </msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.552584" elapsed="0.023024"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.576857" level="INFO">Assigning temporary id 'id_for_scroll' to element '//*[@id='spcCouponsPricing']//*[contains(@class,'spc-quality-badges__badges')]/span[text()='Easy Returns']'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.576857" elapsed="0.023544"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.601405" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.600401" elapsed="0.006543"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:57.607953" level="INFO">Assigning temporary id '' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.606944" elapsed="0.022782"/>
+</kw>
+<arg>//*[@id='spcCouponsPricing']//*[contains(@class,'spc-quality-badges__badges')]/span[text()='Easy Returns']</arg>
+<status status="PASS" start="2024-08-07T20:41:57.551541" elapsed="0.079189"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcCouponsPricing']//*[contains(@class,'spc-quality-badges__badges')]/img[@alt='Easy Returns']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.631731" elapsed="0.021662"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcCouponsPricing']//*[contains(@class,'spc-quality-badges__badges')]/span[text()='Easy Returns']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.654488" elapsed="0.019646"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcCouponsPricing']//*[contains(@class,'spc-quality-badges__badges')]/img[@alt='Quality Assured']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.675180" elapsed="0.023897"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcCouponsPricing']//*[contains(@class,'spc-quality-badges__badges')]/span[text()='Quality Assured']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.700084" elapsed="0.018523"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcCouponsPricing']//*[contains(@class,'spc-quality-badges__badges')]/img[@alt='Original Brands']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.718607" elapsed="0.025486"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcCouponsPricing']//*[contains(@class,'spc-quality-badges__badges')]/span[text()='Original Brands']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.744093" elapsed="0.022762"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcCouponsPricing']//*[contains(@class,'spc-quality-badges__badges')]/img[@alt='Best Prices']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.767892" elapsed="0.064568"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcCouponsPricing']//*[contains(@class,'spc-quality-badges__badges')]/span[text()='Best Prices']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.833462" elapsed="0.149385"/>
+</kw>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.122179" level="INFO">${temp_id} = </msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:57.983863" elapsed="0.138316"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.123166" level="INFO">Assigning temporary id 'id_for_scroll' to element '//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']//span[@class='spc-product-pricing__order-total-text'][text()='Order Total']'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.122179" elapsed="0.065945"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.188124" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.188124" elapsed="0.005520"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.194642" level="INFO">Assigning temporary id '' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.194642" elapsed="0.019786"/>
+</kw>
+<arg>//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']//span[@class='spc-product-pricing__order-total-text'][text()='Order Total']</arg>
+<status status="PASS" start="2024-08-07T20:41:57.983863" elapsed="0.230565"/>
+</kw>
+<if>
+<branch type="IF" condition="'${count_of_bag}' == '1'">
+<kw name="Format String" owner="String">
+<var>${count_of_bag_with_format}</var>
+<arg>{count_of_bag} Item</arg>
+<arg>count_of_bag=${count_of_bag}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="NOT RUN" start="2024-08-07T20:41:58.215436" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-08-07T20:41:58.215436" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Format String" owner="String">
+<msg time="2024-08-07T20:41:58.216492" level="INFO">${count_of_bag_with_format} = 2 Items</msg>
+<var>${count_of_bag_with_format}</var>
+<arg>{count_of_bag} Items</arg>
+<arg>count_of_bag=${count_of_bag}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.216492" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-08-07T20:41:58.216492" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-08-07T20:41:58.215436" elapsed="0.002083"/>
+</if>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']//*[text()='Sub Total (${count_of_bag_with_format})']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.217519" elapsed="0.021781"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-07T20:41:58.240397" level="INFO">${sub_total} = 6930</msg>
+<var>${sub_total}</var>
+<arg>${product_01}[price] + ${product_02}[price]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.240397" elapsed="0.001016"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2024-08-07T20:41:58.242419" level="INFO">${sub_total_with_format} = ฿6,930</msg>
+<var>${sub_total_with_format}</var>
+<arg>฿{:,}</arg>
+<arg>${sub_total}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.241413" elapsed="0.001006"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.259933" level="INFO">Current page contains element '//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']/*[.//*[text()='Sub Total (2 Items)']]/div[normalize-space(.)='฿6,930']'.</msg>
+<arg>//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']/*[.//*[text()='Sub Total (${count_of_bag_with_format})']]/div[normalize-space(.)='${sub_total_with_format}']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.243439" elapsed="0.016494"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.277685" level="INFO">Current page contains element '//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']//*[@id='discountAccordion']//*[normalize-space(text())='Discount']'.</msg>
+<arg>//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']//*[@id='discountAccordion']//*[normalize-space(text())='Discount']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.260946" elapsed="0.016739"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2024-08-07T20:41:58.279183" level="INFO">${discount_with_format} = ฿0</msg>
+<var>${discount_with_format}</var>
+<arg>฿{:,}</arg>
+<arg>${discount}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.279183" elapsed="0.001007"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.297376" level="INFO">Current page contains element '//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']//*[@id='discountAccordion']//*[normalize-space(.)='฿0']'.</msg>
+<arg>//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']//*[@id='discountAccordion']//*[normalize-space(.)='${discount_with_format}']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.280190" elapsed="0.017186"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.313199" level="INFO">Current page contains element '//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']/*[.//*[.='Congratulation! You get FREE Standard Delivery']]'.</msg>
+<arg>//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']/*[.//*[.='Congratulation! You get FREE Standard Delivery']]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.298387" elapsed="0.014812"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.327052" level="INFO">Current page contains element '//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']//span[@class='spc-product-pricing__order-total-text'][text()='Order Total']'.</msg>
+<arg>//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']//span[@class='spc-product-pricing__order-total-text'][text()='Order Total']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.314219" elapsed="0.012833"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.343946" level="INFO">Current page contains element '//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']//span[@class='spc-product-pricing__incl-tax-text'][text()='incl. VAT']'.</msg>
+<arg>//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']//span[@class='spc-product-pricing__incl-tax-text'][text()='incl. VAT']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.328384" elapsed="0.015562"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-07T20:41:58.344965" level="INFO">${order_total} = 6930</msg>
+<var>${order_total}</var>
+<arg>${sub_total} + ${discount}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.343946" elapsed="0.002110"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2024-08-07T20:41:58.346056" level="INFO">${order_total_with_format} = ฿6,930</msg>
+<var>${order_total_with_format}</var>
+<arg>฿{:,}</arg>
+<arg>${order_total}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.346056" elapsed="0.001402"/>
+</kw>
+<kw name="Format String" owner="String">
+<msg time="2024-08-07T20:41:58.348462" level="INFO">${order_total_without_Symbol_format} = 6,930</msg>
+<var>${order_total_without_Symbol_format}</var>
+<arg>{:,}</arg>
+<arg>${order_total}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.347458" elapsed="0.001004"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.366613" level="INFO">Current page contains element '//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']/*[.//span[text()='Order Total']]/*[normalize-space(.)='฿6,930']'.</msg>
+<arg>//*[@id='spcCouponsPricing']//section[@class='spc-product-pricing']/*[.//span[text()='Order Total']]/*[normalize-space(.)='${order_total_with_format}']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.349610" elapsed="0.018031"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.382008" level="INFO">Current page contains element '//a[@data-testid='btn-saveCart-checkout' and .//span[text()='Checkout']]'.</msg>
+<arg>//a[@data-testid='btn-saveCart-checkout' and .//span[text()='Checkout']]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.367641" elapsed="0.015384"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.397149" level="INFO">Current page contains element '//a[@data-testid='btn-saveCart-checkout' and .//span[text()='Checkout']]//span[@id='spcBagGrandTotal'][text()='6,930']'.</msg>
+<arg>//a[@data-testid='btn-saveCart-checkout' and .//span[text()='Checkout']]//span[@id='spcBagGrandTotal'][text()='${order_total_without_Symbol_format}']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.384033" elapsed="0.014147"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:58.399220" level="INFO">Clicking element '//a[@data-testid='btn-saveCart-checkout' and .//span[text()='Checkout']]'.</msg>
+<arg>//a[@data-testid='btn-saveCart-checkout' and .//span[text()='Checkout']]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.398180" elapsed="0.157196"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[contains(@class, 'spc-log-in spc-login-register')]//h2[text()='Log in or Sign up']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:58.555376" elapsed="0.762736"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[contains(@class, 'spc-log-in spc-login-register')]//span[text()='Continue as Guest']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:41:59.318112" elapsed="0.030150"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:41:59.349267" level="INFO">Clicking element '//*[contains(@class, 'spc-log-in spc-login-register')]//span[text()='Continue as Guest']'.</msg>
+<arg>//*[contains(@class, 'spc-log-in spc-login-register')]//span[text()='Continue as Guest']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:41:59.349267" elapsed="2.750200"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[text()='Back to shopping bag']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:02.100514" elapsed="0.071356"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2[normalize-space(text())='Secure Checkout']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:02.171870" elapsed="0.015501"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[@data-testid='lnk-viewCheckout-items1']//span[text()='View Items']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:02.188420" elapsed="1.386649"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:03.576549" level="INFO">Clicking element '//a[@data-testid='lnk-viewCheckout-items1']//span[text()='View Items']'.</msg>
+<arg>//a[@data-testid='lnk-viewCheckout-items1']//span[text()='View Items']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:03.575069" elapsed="0.109903"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2[text()='Shipment 1 of 1']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:03.685978" elapsed="0.667079"/>
+</kw>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.370456" level="INFO">${temp_id} = </msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.354128" elapsed="0.016328"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.371461" level="INFO">Assigning temporary id 'id_for_scroll' to element '//section[@class='spc-product-card' and .//*[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']]'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.371461" elapsed="0.013396"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.385858" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.385858" elapsed="0.004287"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.391151" level="INFO">Assigning temporary id '' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.390145" elapsed="0.014467"/>
+</kw>
+<arg>//section[@class='spc-product-card' and .//*[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']]</arg>
+<status status="PASS" start="2024-08-07T20:42:04.354128" elapsed="0.050484"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//section[@class='spc-product-card' and .//*[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']]//*[text()='DIOR']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.404612" elapsed="0.018814"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.431605" level="INFO">Current page contains element '//section[@class='spc-product-card' and .//*[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']]'.</msg>
+<arg>//section[@class='spc-product-card' and .//*[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.424446" elapsed="0.008165"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.444042" level="INFO">Current page contains element '//section[@class='spc-product-card' and .//*[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']]//*[normalize-space(.)='฿1,845']'.</msg>
+<arg>//section[@class='spc-product-card' and .//*[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']]//*[normalize-space(.)='฿1,845']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.432611" elapsed="0.011431"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.457344" level="INFO">Current page contains element '//section[@class='spc-product-card' and .//*[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']]//*[normalize-space(text())='Quantity: 1']'.</msg>
+<arg>//section[@class='spc-product-card' and .//*[text()='La Mousse OFF/ON Foaming Cleanser 150 mL']]//*[normalize-space(text())='Quantity: 1']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.445119" elapsed="0.012225"/>
+</kw>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.475066" level="INFO">${temp_id} = </msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.459357" elapsed="0.015709"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.476069" level="INFO">Assigning temporary id 'id_for_scroll' to element '//section[@class='spc-product-card' and .//*[text()="Dior Homme Intense  Eau de Parfum intense 100 mL"]]'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.476069" elapsed="0.012685"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.489936" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.488754" elapsed="0.005516"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.495270" level="INFO">Assigning temporary id '' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.494270" elapsed="0.013969"/>
+</kw>
+<arg>//section[@class='spc-product-card' and .//*[text()="Dior Homme Intense${SPACE * 2}Eau de Parfum intense 100 mL"]]</arg>
+<status status="PASS" start="2024-08-07T20:42:04.458349" elapsed="0.049890"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//section[@class='spc-product-card' and .//*[text()="Dior Homme Intense${SPACE * 2}Eau de Parfum intense 100 mL"]]//*[text()='DIOR']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.509242" elapsed="0.015544"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.532264" level="INFO">Current page contains element '//section[@class='spc-product-card' and .//*[text()="Dior Homme Intense  Eau de Parfum intense 100 mL"]]'.</msg>
+<arg>//section[@class='spc-product-card' and .//*[text()="Dior Homme Intense${SPACE * 2}Eau de Parfum intense 100 mL"]]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.524786" elapsed="0.008483"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.543588" level="INFO">Current page contains element '//section[@class='spc-product-card' and .//*[text()="Dior Homme Intense  Eau de Parfum intense 100 mL"]]//*[normalize-space(.)='฿5,085']'.</msg>
+<arg>//section[@class='spc-product-card' and .//*[text()="Dior Homme Intense${SPACE * 2}Eau de Parfum intense 100 mL"]]//*[normalize-space(.)='฿5,085']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.533269" elapsed="0.011334"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.555763" level="INFO">Current page contains element '//section[@class='spc-product-card' and .//*[text()="Dior Homme Intense  Eau de Parfum intense 100 mL"]]//*[normalize-space(text())='Quantity: 1']'.</msg>
+<arg>//section[@class='spc-product-card' and .//*[text()="Dior Homme Intense${SPACE * 2}Eau de Parfum intense 100 mL"]]//*[normalize-space(text())='Quantity: 1']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.544603" elapsed="0.011160"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id='spcShipmentDetailsWrap']//i[@class='icon icon-spc-back-arrow']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.556773" elapsed="0.273684"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcShipmentDetailsWrap']//i[@class='icon icon-spc-back-arrow']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.830457" elapsed="0.014034"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.845543" level="INFO">Clicking element '//*[@id='spcShipmentDetailsWrap']//i[@class='icon icon-spc-back-arrow']'.</msg>
+<arg>//*[@id='spcShipmentDetailsWrap']//i[@class='icon icon-spc-back-arrow']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.844491" elapsed="0.061338"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//*[@class='spc-modal-backdrop']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.906907" elapsed="0.012277"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcShipmentGroupsWrap']//h3[@id='deliveryTitle'][text()='Delivery To']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.919184" elapsed="0.017820"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:04.938052" level="INFO">Clicking element '//*[@id='spcShipmentGroupsWrap']//p[normalize-space(.)='Add your delivery address']'.</msg>
+<arg>//*[@id='spcShipmentGroupsWrap']//p[normalize-space(.)='Add your delivery address']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:04.938052" elapsed="0.078612"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcAddDeliveryDetails']//h2[text()='Add Delivery Details']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:05.016664" elapsed="0.662878"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:05.691833" level="INFO">Current page contains element '//*[@id='spcAddDeliveryDetails']//span[@class='spc-feature-list-item__list-label'][normalize-space(text())='Add new address']'.</msg>
+<arg>//*[@id='spcAddDeliveryDetails']//span[@class='spc-feature-list-item__list-label'][normalize-space(text())='Add new address']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:42:05.679542" elapsed="0.012291"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:05.692839" level="INFO">Clicking element '//*[@id='spcAddDeliveryDetails']//span[@class='spc-feature-list-item__list-label'][normalize-space(text())='Add new address']'.</msg>
+<arg>//*[@id='spcAddDeliveryDetails']//span[@class='spc-feature-list-item__list-label'][normalize-space(text())='Add new address']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:05.691833" elapsed="0.085886"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id='spcAddAddress']//h2[text()='Add Address']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:05.777719" elapsed="0.664031"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//input[@id='firstNameTxtbx']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.442846" elapsed="0.015769"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:06.483431" level="INFO">Content of text field '//input[@id='firstNameTxtbx']' is ''.</msg>
+<arg>//input[@id='firstNameTxtbx']</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.459619" elapsed="0.023812"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:06.484439" level="INFO">Typing text 'First' into text field '//input[@id='firstNameTxtbx']'.</msg>
+<arg>//input[@id='firstNameTxtbx']</arg>
+<arg>First</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.484439" elapsed="0.099002"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:06.606656" level="INFO">Content of text field '//input[@id='firstNameTxtbx']' is 'First'.</msg>
+<arg>//input[@id='firstNameTxtbx']</arg>
+<arg>First</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.583441" elapsed="0.024221"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:06.632698" level="INFO">Content of text field '//input[@id='lastNameTxtbx']' is ''.</msg>
+<arg>//input[@id='lastNameTxtbx']</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.608773" elapsed="0.023925"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:06.633847" level="INFO">Typing text 'Last' into text field '//input[@id='lastNameTxtbx']'.</msg>
+<arg>//input[@id='lastNameTxtbx']</arg>
+<arg>Last</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.632698" elapsed="0.089076"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:06.745335" level="INFO">Content of text field '//input[@id='lastNameTxtbx']' is 'Last'.</msg>
+<arg>//input[@id='lastNameTxtbx']</arg>
+<arg>Last</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.721774" elapsed="0.023561"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:06.778036" level="INFO">Content of text field '//input[@id='phoneNoTxtbx']' is ''.</msg>
+<arg>//input[@id='phoneNoTxtbx']</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.746335" elapsed="0.031701"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:06.779044" level="INFO">Typing text '0912345678' into text field '//input[@id='phoneNoTxtbx']'.</msg>
+<arg>//input[@id='phoneNoTxtbx']</arg>
+<arg>0912345678</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.779044" elapsed="0.150249"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:06.950044" level="INFO">Content of text field '//input[@id='phoneNoTxtbx']' is '0912345678'.</msg>
+<arg>//input[@id='phoneNoTxtbx']</arg>
+<arg>0912345678</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.929293" elapsed="0.021756"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:06.975746" level="INFO">Content of text field '//input[@id='emailTxtbx']' is ''.</msg>
+<arg>//input[@id='emailTxtbx']</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.951049" elapsed="0.025707"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:06.977780" level="INFO">Typing text 'info@gmail.com' into text field '//input[@id='emailTxtbx']'.</msg>
+<arg>//input[@id='emailTxtbx']</arg>
+<arg>info@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:06.976756" elapsed="0.118639"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:07.119765" level="INFO">Content of text field '//input[@id='emailTxtbx']' is 'info@gmail.com'.</msg>
+<arg>//input[@id='emailTxtbx']</arg>
+<arg>info@gmail.com</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.095395" elapsed="0.025371"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:07.148957" level="INFO">Content of text field '//input[@id='addressTxtbx']' is ''.</msg>
+<arg>//input[@id='addressTxtbx']</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.120766" elapsed="0.028191"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:07.149961" level="INFO">Typing text '11/35 Lotus' into text field '//input[@id='addressTxtbx']'.</msg>
+<arg>//input[@id='addressTxtbx']</arg>
+<arg>11/35 Lotus</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.148957" elapsed="0.115158"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:07.284458" level="INFO">Content of text field '//input[@id='addressTxtbx']' is '11/35 Lotus'.</msg>
+<arg>//input[@id='addressTxtbx']</arg>
+<arg>11/35 Lotus</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.264115" elapsed="0.021374"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:07.317418" level="INFO">Content of text field '//input[@id='postcodeTxtbx']' is ''.</msg>
+<arg>//input[@id='postcodeTxtbx']</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.285489" elapsed="0.032979"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:07.319475" level="INFO">Typing text '10260' into text field '//input[@id='postcodeTxtbx']'.</msg>
+<arg>//input[@id='postcodeTxtbx']</arg>
+<arg>10260</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.318468" elapsed="0.106618"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:07.446888" level="INFO">Content of text field '//input[@id='postcodeTxtbx']' is '10260'.</msg>
+<arg>//input[@id='postcodeTxtbx']</arg>
+<arg>10260</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.426184" elapsed="0.020704"/>
+</kw>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:07.464320" level="INFO">${temp_id} = selectSubDistrict</msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.448897" elapsed="0.015423"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:07.465323" level="INFO">Assigning temporary id 'id_for_scroll' to element '//select[@id='selectSubDistrict']'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.464320" elapsed="0.013452"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:07.477772" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.477772" elapsed="0.005047"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:07.483831" level="INFO">Assigning temporary id 'selectSubDistrict' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.482819" elapsed="0.085590"/>
+</kw>
+<arg>//select[@id='selectSubDistrict']</arg>
+<status status="PASS" start="2024-08-07T20:42:07.447897" elapsed="0.120512"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//select[@id='selectProvience']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.569418" elapsed="0.017357"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>(//select[@id='selectProvience']/option)[1][text()='Bangkok']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:42:07.586775" elapsed="0.636074"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>(//select[@id='selectDistrict']/option)[1][text()='Phra Khanong']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:42:08.222849" elapsed="0.011002"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>(//select[@id='selectSubDistrict']/option)[1][text()='Bang Chak']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-07T20:42:08.233851" elapsed="0.010517"/>
+</kw>
+<kw name="Scroll Into View">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:08.261959" level="INFO">${temp_id} = addressLabelTxtbx</msg>
+<var>${temp_id}</var>
+<arg>${locator}</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:08.245372" elapsed="0.016587"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:08.262985" level="INFO">Assigning temporary id 'id_for_scroll' to element '//input[@id='addressLabelTxtbx']'.</msg>
+<arg>${locator}</arg>
+<arg>id=id_for_scroll</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:08.262985" elapsed="0.016113"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:08.280106" level="INFO">Executing JavaScript:
+document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
+Without any arguments.</msg>
+<arg>document.querySelector('#id_for_scroll').scrollIntoView({ behavior: "instant", block: "center", inline: "center" })</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-07T20:42:08.279098" elapsed="0.006256"/>
+</kw>
+<kw name="Assign Id To Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:08.285354" level="INFO">Assigning temporary id 'addressLabelTxtbx' to element '//*[@id='id_for_scroll']'.</msg>
+<arg>//*[@id='id_for_scroll']</arg>
+<arg>${temp_id}</arg>
+<doc>Assigns a temporary ``id`` to the element specified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:08.285354" elapsed="0.019011"/>
+</kw>
+<arg>//input[@id='addressLabelTxtbx']</arg>
+<status status="PASS" start="2024-08-07T20:42:08.244368" elapsed="0.059997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//input[@id='addressLabelTxtbx']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-07T20:42:08.304365" elapsed="0.014531"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:08.343750" level="INFO">Content of text field '//input[@id='addressLabelTxtbx']' is ''.</msg>
+<arg>//input[@id='addressLabelTxtbx']</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:08.318896" elapsed="0.024854"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:08.345831" level="INFO">Typing text 'Office' into text field '//input[@id='addressLabelTxtbx']'.</msg>
+<arg>//input[@id='addressLabelTxtbx']</arg>
+<arg>Office</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:08.344787" elapsed="0.102801"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:08.472699" level="INFO">Content of text field '//input[@id='addressLabelTxtbx']' is 'Office'.</msg>
+<arg>//input[@id='addressLabelTxtbx']</arg>
+<arg>Office</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2024-08-07T20:42:08.448871" elapsed="0.023828"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-07T20:42:08.473746" level="INFO">Clicking element '//a[@id='submitAddAddress']//span[text()='Use This Address']'.</msg>
+<arg>//a[@id='submitAddAddress']//span[text()='Use This Address']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-07T20:42:08.473746" elapsed="0.102720"/>
+</kw>
+<status status="PASS" start="2024-08-07T20:41:15.676389" elapsed="52.900077"/>
+</test>
+<status status="PASS" start="2024-08-07T20:41:15.448912" elapsed="53.129554"/>
+</suite>
+<status status="PASS" start="2024-08-07T20:41:15.444514" elapsed="53.135954"/>
+</suite>
+<status status="PASS" start="2024-08-07T20:41:15.398249" elapsed="53.185355"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Central">Robot Central</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Suite">Robot Central.Test Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Ct">Robot Central.Test Suite.Ct</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
