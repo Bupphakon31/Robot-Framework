@@ -1,3 +1,0 @@
-robotframwork-seleniumlibrary
-robotframework-stringformat
-pyyaml
