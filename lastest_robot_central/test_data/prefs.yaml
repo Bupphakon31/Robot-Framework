@@ -1,8 +1,0 @@
-prefs:
-  # safebrowsing.enabled: true
-    profile:
-      default_content_setting_values:
-        geolocation: 1
-      # content_setting:
-      #   permission_actions:
-      #     geolocations: 1
